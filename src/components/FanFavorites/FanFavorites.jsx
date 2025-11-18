@@ -1,18 +1,7 @@
 import styles from './FanFavorites.module.css';
 import { Plus, Minus } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
-function FanFavorites() {
-  const [albums, setAlbums] = useState([]);
-
-  useEffect(() => {
-    fetch('../../public/data.json')
-      .then((res) => res.json())
-      .then((data) => data.sort((a, b) => a.salesRanking - b.salesRanking)) // sort albums ranking
-      .then((sortedData) => sortedData.slice(0, 4)) // take top 4 only
-      .then((topAlbums) => setAlbums(topAlbums));
-  }, []);
-
+function FanFavorites({ albums }) {
   return (
     <div className={styles.fanFavorites}>
       <h2 className={styles.title}>Fan Favorites</h2>
