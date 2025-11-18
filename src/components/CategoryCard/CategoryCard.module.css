@@ -1,0 +1,19 @@
+.imageContainer {
+  position: relative;
+}
+
+.image {
+  width: 450px;
+}
+.text {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-size: 2.4rem;
+}
+
+.textSecondary {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 1.6rem;
+}
