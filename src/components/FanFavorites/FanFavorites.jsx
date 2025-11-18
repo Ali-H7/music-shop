@@ -2,11 +2,12 @@ import styles from './FanFavorites.module.css';
 import { Plus, Minus } from 'lucide-react';
 
 function FanFavorites({ albums }) {
+  const topAlbums = albums.slice(0, 4);
   return (
     <div className={styles.fanFavorites}>
       <h2 className={styles.title}>Fan Favorites</h2>
       <div className={styles.cards}>
-        {albums.map((album) => {
+        {topAlbums.map((album) => {
           return (
             <div key={album.id} className={styles.albumCard}>
               <img src={album.image} className={styles.albumCover} />
