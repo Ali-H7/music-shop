@@ -2,12 +2,12 @@ import styles from './AlbumOfTheMonth.module.css';
 
 function AlbumOfTheMonth({ album }) {
   return (
-    <div>
-      <img src={album.image} />
-      <div>
+    <div className={styles.albumOfTheMonthContainer}>
+      <img src={album.imageOfTheMonth} className={styles.albumCover} />
+      <div className={styles.textContainer}>
         <h4>Album of The Month</h4>
         <h1>{album.albumName + ' - ' + album.artist}</h1>
-        <p>{album.description}</p>
+        <p className={styles.textDescription}>{album.description}</p>
         <button>Discover Now</button>
       </div>
     </div>

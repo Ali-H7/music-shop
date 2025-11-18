@@ -1,0 +1,26 @@
+.albumOfTheMonthContainer {
+  background-color: #3f3a60fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px;
+  gap: 64px;
+}
+
+.albumCover {
+  max-width: 700px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  font-size: 1.6rem;
+  gap: 8px;
+}
+
+.textDescription {
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  padding-bottom: 8px;
+}
