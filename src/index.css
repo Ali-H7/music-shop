@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('../../public/fonts/Akira Expanded.woff2') format('woff2');
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -24,7 +29,7 @@ body {
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   /*  */
-  font-family: 'Inter', sans-serif;
+  font-family: 'Akira Expanded', sans-serif;
   font-size: 62.5%;
 }
 
