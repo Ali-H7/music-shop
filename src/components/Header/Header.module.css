@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  flex: 1;
+  padding: 32px 16px;
+}
+
+.logo {
+  color: #f15bb5;
+  font-size: 3.2rem;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  gap: 24px;
+  font-size: 1.6rem;
+}
