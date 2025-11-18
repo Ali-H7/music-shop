@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "albumName": "Sour",
+    "artist": "Olivia Rodrigo",
+    "image": "images/sour.webp",
+    "price": "1 BHD",
+    "salesRanking": 1
+  },
+  {
+    "id": 1,
+    "albumName": "Rolling Papers",
+    "artist": "Wiz Khalifa",
+    "image": "images/rolling-papers.webp",
+    "price": "1 BHD",
+    "salesRanking": 5
+  },
+  {
+    "id": 2,
+    "albumName": "Greatest Hits",
+    "artist": "2PAC",
+    "image": "images/greatest-hits.webp",
+    "price": "1 BHD",
+    "salesRanking": 6
+  },
+  {
+    "id": 3,
+    "albumName": "Evermore",
+    "artist": "Taylor Swift",
+    "image": "images/evermore.webp",
+    "price": "1 BHD",
+    "salesRanking": 2
+  },
+  {
+    "id": 4,
+    "albumName": "Justice",
+    "artist": "Justin Bieber",
+    "image": "images/justice.webp",
+    "price": "1 BHD",
+    "salesRanking": 7
+  },
+  {
+    "id": 5,
+    "albumName": "Badlands",
+    "artist": "Halsey",
+    "image": "images/badlands.webp",
+    "price": "1 BHD",
+    "salesRanking": 8
+  },
+  {
+    "id": 6,
+    "albumName": "Kiss",
+    "artist": "Carly Rae Jepsen",
+    "image": "images/kiss.webp",
+    "price": "1 BHD",
+    "salesRanking": 9
+  },
+  {
+    "id": 7,
+    "albumName": "1989 (Taylor's Version)",
+    "artist": "Taylor Swift",
+    "image": "images/1989ts.webp",
+    "price": "1 BHD",
+    "salesRanking": 10
+  },
+  {
+    "id": 8,
+    "albumName": "Recovery",
+    "artist": "Eminem",
+    "image": "images/recovery.webp",
+    "price": "1 BHD",
+    "salesRanking": 11
+  },
+  {
+    "id": 9,
+    "albumName": "Guts",
+    "artist": "Olivia Rodrigo",
+    "image": "images/guts.webp",
+    "price": "1 BHD",
+    "salesRanking": 12
+  },
+  {
+    "id": 10,
+    "albumName": "Hybrid Theory",
+    "artist": "Linkin Park",
+    "image": "images/hybrid-theory.webp",
+    "price": "1 BHD",
+    "salesRanking": 4
+  },
+  {
+    "id": 11,
+    "albumName": "Better Dayz",
+    "artist": "2PAC",
+    "image": "images/better-dayz.webp",
+    "price": "1 BHD",
+    "salesRanking": 3
+  }
+]
