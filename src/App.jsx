@@ -3,7 +3,7 @@ import Header from './components/Header/Header.jsx';
 import AnnouncementBanner from './components/AnnouncementBanner/AnnouncementBanner.jsx';
 import FanFavorites from './components/FanFavorites/FanFavorites.jsx';
 import AlbumOfTheMonth from './components/AlbumOfTheMonth/AlbumOfTheMonth.jsx';
-
+import Category from './components/Category/Category.jsx';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
       <AnnouncementBanner />
       <FanFavorites albums={albums} />
       <AlbumOfTheMonth album={albumOfTheMonth} />
+      <Category />
     </div>
   );
 }

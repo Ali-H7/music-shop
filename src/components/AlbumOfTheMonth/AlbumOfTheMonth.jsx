@@ -8,7 +8,7 @@ function AlbumOfTheMonth({ album }) {
         <h4>Album of The Month</h4>
         <h1>{album.albumName + ' - ' + album.artist}</h1>
         <p className={styles.textDescription}>{album.description}</p>
-        <button>Discover Now</button>
+        <button className={styles.discoverBtn}>Discover Now</button>
       </div>
     </div>
   );

@@ -24,3 +24,10 @@
   font-size: 2rem;
   padding-bottom: 8px;
 }
+
+.discoverBtn {
+  background-color: #fee440;
+  border: none;
+  height: 40px;
+  border-radius: 5rem;
+}

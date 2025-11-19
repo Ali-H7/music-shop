@@ -1,3 +1,5 @@
+import styles from './CategoryCard.module.css';
+
 function CategoryCard({ image, mainText }) {
   return (
     <div className={styles.imageContainer}>
