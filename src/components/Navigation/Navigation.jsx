@@ -14,18 +14,27 @@ function Navigation() {
       title: 'Account',
       list: ['Login', 'Register', 'Order History', 'Wishlist'],
     },
+    {
+      title: 'Follow US',
+      list: [
+        'fa-brands fa-x-twitter',
+        'fa-brands fa-square-facebook',
+        'fa-brands fa-square-instagram',
+        'fa-brands fa-tiktok',
+      ],
+    },
   ];
 
   return (
     <div className={styles.navigation}>
-      {navigationMap.map((section) => {
+      {navigationMap.map((section, i) => {
         return (
-          <div>
-            <h3>section.title</h3>
-            <ul>
-              {section.list.map((item) => (
-                <li>{item}</li>
-              ))}
+          <div className={styles.section}>
+            <h3 className={styles.title}>{section.title}</h3>
+            <ul className={`${styles.list} ${i === 3 && styles.icons}`}>
+              {section.list.map((item) => {
+                return i !== 3 ? <li className={styles.listItem}>{item}</li> : <li className={item}></li>;
+              })}
             </ul>
           </div>
         );
@@ -33,3 +42,5 @@ function Navigation() {
     </div>
   );
 }
+
+export default Navigation;
