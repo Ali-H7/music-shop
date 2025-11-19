@@ -7,21 +7,18 @@
   align-items: center;
 }
 
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
 .name {
   border-bottom: solid 1px #9b5de5;
+  transition: color 0.3s;
 }
 
-.gitBtn {
-  background-color: transparent;
-  border: none;
-  color: white;
-  padding-left: 8px;
-  font-size: 24px;
-  transition: color 0.5s;
-}
-
-.gitBtn:hover {
-  transform: scale(1.2);
+.name:hover {
   cursor: pointer;
   color: #9b5de5;
 }

@@ -4,9 +4,9 @@ function Copyrights() {
   return (
     <div className={styles.copyrights}>
       <p>
-        Copyright © 2025, Developed & designed by <span className={styles.name}>Ali Hasan</span>
+        Copyright © 2025, Developed & designed by{' '}
         <a href='https://github.com/Ali-H7'>
-          <button className={`fa fa-github ${styles.gitBtn}`} aria-hidden='true'></button>
+          <span className={styles.name}>Ali Hasan</span>
         </a>
       </p>
     </div>
