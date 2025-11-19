@@ -1,13 +1,9 @@
 import './App.css';
 import Header from './components/Header/Header.jsx';
 import AnnouncementBanner from './components/AnnouncementBanner/AnnouncementBanner.jsx';
-import FanFavorites from './components/FanFavorites/FanFavorites.jsx';
-import AlbumOfTheMonth from './components/AlbumOfTheMonth/AlbumOfTheMonth.jsx';
-import Category from './components/Category/Category.jsx';
-import Newsletter from './components/Newsletter/Newsletter.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import { useEffect, useState } from 'react';
-
+import { Outlet } from 'react-router';
 function App() {
   const [albums, setAlbums] = useState([]);
   const [albumOfTheMonth, setAlbumOfTheMonth] = useState('');
@@ -24,10 +20,7 @@ function App() {
     <div className='app-container'>
       <Header />
       <AnnouncementBanner />
-      <FanFavorites albums={albums} />
-      <AlbumOfTheMonth album={albumOfTheMonth} />
-      <Category />
-      <Newsletter />
+      <Outlet context={{ albums, albumOfTheMonth }} />
       <Footer />
     </div>
   );
