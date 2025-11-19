@@ -12,18 +12,18 @@ function FanFavorites({ albums }) {
             <div key={album.id} className={styles.albumCard}>
               <img src={album.image} className={styles.albumCover} />
               <div className={styles.albumTitle}>
-                <h3>{album.albumName}</h3>
+                <h3 className={styles.ablumName}>{album.albumName}</h3>
                 <p>{album.price}</p>
               </div>
               <p className={styles.artistName}>{album.artist}</p>
-              <div className='add-to-cart'>
+              {/* <div className='add-to-cart'>
                 <div className={styles.count}>
                   <Minus />
                   <p>0</p>
                   <Plus />
                 </div>
                 <button className={styles.cartButton}>Add to Cart</button>
-              </div>
+              </div> */}
             </div>
           );
         })}

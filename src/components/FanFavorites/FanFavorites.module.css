@@ -56,3 +56,12 @@
   font-size: 1.8rem;
   font-family: 'Montserrat';
 }
+
+.albumCover:hover {
+  cursor: pointer;
+}
+
+.ablumName:hover {
+  cursor: pointer;
+  color: #9b5de5;
+}
