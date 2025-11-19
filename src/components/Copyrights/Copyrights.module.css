@@ -1,0 +1,27 @@
+.copyrights {
+  padding: 8px;
+  font-size: 1.6rem;
+  font-family: 'Montserrat';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  border-bottom: solid 1px #9b5de5;
+}
+
+.gitBtn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding-left: 8px;
+  font-size: 24px;
+  transition: color 0.5s;
+}
+
+.gitBtn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: #9b5de5;
+}
