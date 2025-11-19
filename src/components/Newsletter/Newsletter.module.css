@@ -1,0 +1,43 @@
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px;
+  background-color: #4c4452;
+  gap: 16px;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 650px;
+}
+.emailContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.emailInput {
+  flex-grow: 1;
+  font-family: 'Montserrat';
+  padding: 8px;
+}
+
+.signUpBtn {
+  width: 200px;
+  height: 48px;
+  border: none;
+  border-radius: 24px;
+  background-color: #fee440;
+}
+
+.agreementContainer {
+  display: flex;
+  gap: 16px;
+  font-family: 'Montserrat';
+  padding-left: 1px;
+}
