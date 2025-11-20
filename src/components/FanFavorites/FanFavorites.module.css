@@ -33,26 +33,8 @@
   font-size: 1.6rem;
 }
 
-.artistName {
-  font-size: 1.8rem;
-  font-family: 'Montserrat';
-}
-
-.count {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-self: flex-end;
-  padding-bottom: 8px;
-  font-size: 1.6rem;
-}
-
-.cartButton {
-  width: 100%;
-  height: 32px;
-  background-color: #fee440;
-  border: none;
-  border-radius: 5rem;
+.artistName,
+.price {
   font-size: 1.8rem;
   font-family: 'Montserrat';
 }
@@ -63,5 +45,5 @@
 
 .ablumName:hover {
   cursor: pointer;
-  color: #9b5de5;
+  color: #fee440;
 }
