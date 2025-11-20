@@ -5,4 +5,5 @@
   justify-content: center;
   gap: 64px;
   font-size: 1.6rem;
+  flex-grow: 1;
 }
