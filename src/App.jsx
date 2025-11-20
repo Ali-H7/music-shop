@@ -2,13 +2,14 @@ import './App.css';
 import Header from './components/Header/Header.jsx';
 import AnnouncementBanner from './components/AnnouncementBanner/AnnouncementBanner.jsx';
 import Footer from './components/Footer/Footer.jsx';
+
 import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router';
 function App() {
   const [albums, setAlbums] = useState([]);
   const [albumOfTheMonth, setAlbumOfTheMonth] = useState('');
   useEffect(() => {
-    fetch('./public/data.json')
+    fetch('./data.json')
       .then((res) => res.json())
       .then((data) => data.sort((a, b) => a.salesRanking - b.salesRanking)) // sort albums ranking
       .then((sortedAlbums) => {
