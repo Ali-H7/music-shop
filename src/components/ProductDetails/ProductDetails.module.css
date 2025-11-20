@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 64px;
+  font-size: 1.6rem;
+  background-color: #212121;
+}
+
+.productCard {
+  display: flex;
+  gap: 48px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  padding-top: 32px;
+}
+
+.price {
+  font-family: 'Montserrat';
+}
+
+.description {
+  font-family: 'Montserrat';
+}
