@@ -1,0 +1,45 @@
+.summaryContainer {
+  font-family: 'Montserrat';
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 16px;
+  font-family: 'Akira Expanded';
+}
+
+.price,
+.vat,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.vat {
+  border-bottom: 1px solid white;
+}
+
+.total {
+  padding: 16px 0;
+  font-family: 'Akira Expanded';
+  letter-spacing: 1px;
+}
+
+.checkoutBtn {
+  background-color: #fee440;
+  width: 100%;
+  padding: 8px;
+  border-radius: 24px;
+  border: none;
+  font-family: 'Akira Expanded';
+}
+
+.continue {
+  text-align: center;
+  padding: 16px;
+  color: #9b5de5;
+}

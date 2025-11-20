@@ -39,24 +39,6 @@ function ShoppingCartTable() {
               </div>
             </td>
           </tr>
-          <tr>
-            <td>
-              <div className={styles.itemContainer}>
-                <img src={albumOfTheMonth.image} alt='' className={styles.image} />
-                <div className={styles.text}>
-                  <p className={styles.title}>{albumOfTheMonth.albumName}</p>
-                  <p className={styles.subText}>{albumOfTheMonth.artist}</p>
-                </div>
-              </div>
-            </td>
-            <td className={styles.subText}>{`${albumOfTheMonth.price} BHD`}</td>
-            <td className={styles.subText}>3</td>
-            <td>
-              <div className={`${styles.delete} ${styles.subText}`}>
-                Delete <SquareX />
-              </div>
-            </td>
-          </tr>
         </tbody>
       </table>
     </div>

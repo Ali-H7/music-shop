@@ -3,25 +3,25 @@ import styles from './OrderSummary.module.css';
 function OrderSummary() {
   return (
     <div className={styles.summaryContainer}>
-      <h6>Order Summary</h6>
-      <div>
+      <h3 className={styles.title}>Order Summary</h3>
+      <div className={styles.price}>
         <p>Subtotal:</p>
         <p>1 BHD</p>
       </div>
-      <div>
+      <div className={styles.price}>
         <p>Shipping:</p>
         <p>1 BHD</p>
       </div>
-      <div>
+      <div className={styles.vat}>
         <p>VAT</p>
         <p>1 BHD</p>
       </div>
-      <div>
+      <div className={styles.total}>
         <p>Total:</p>
         <p>1 BHD</p>
       </div>
-      <button>Checkout</button>
-      <p>Continue Shopping</p>
+      <button className={styles.checkoutBtn}>Checkout</button>
+      <p className={styles.continue}>Continue Shopping</p>
     </div>
   );
 }
