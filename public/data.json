@@ -3,80 +3,89 @@
     "id": 0,
     "albumName": "Sour",
     "artist": "Olivia Rodrigo",
-    "image": "images/sour.webp",
+    "image": "/images/sour.webp",
     "price": "1 BHD",
-    "salesRanking": 1
+    "salesRanking": 1,
+    "description": "Olivia Rodrigo's debut album Sour (2021) is a pop-oriented record that explores the raw and complex emotions of adolescence, ranging from deep heartbreak and jealousy to teenage angst. It blends styles from energetic pop-punk anthems to intimate bedroom pop ballads, establishing her voice for a new generation."
   },
   {
     "id": 1,
     "albumName": "Rolling Papers",
     "artist": "Wiz Khalifa",
-    "image": "images/rolling-papers.webp",
+    "image": "/images/rolling-papers.webp",
     "price": "1 BHD",
-    "salesRanking": 5
+    "salesRanking": 5,
+    "description": "Wiz Khalifa's major-label debut, Rolling Papers (2011), is a defining party-rap album that successfully merges traditional hip-hop with modern pop songwriting. Tracks like 'Black and Yellow' and 'No Sleep' feature catchy sing-along choruses and synthesizer sparkle, elevating the pursuit of a laidback, good time into anthems."
   },
   {
     "id": 2,
     "albumName": "Greatest Hits",
     "artist": "2PAC",
-    "image": "images/greatest-hits.webp",
+    "image": "/images/greatest-hits.webp",
     "price": "1 BHD",
-    "salesRanking": 6
+    "salesRanking": 6,
+    "description": "2Pac's Greatest Hits (1998) is a non-chronological compilation of 21 career highlights, featuring iconic tracks from his time on Death Row and earlier works. The double album also includes four previously unreleased songs, such as the critically acclaimed 'Changes,' showcasing the depth of his lyrical legacy."
   },
   {
     "id": 3,
     "albumName": "Evermore",
     "artist": "Taylor Swift",
-    "image": "images/evermore.webp",
+    "image": "/images/evermore.webp",
     "price": "1 BHD",
-    "salesRanking": 2
+    "salesRanking": 2,
+    "description": "Taylor Swift's ninth studio album, Evermore (2020), is a 'sister album' to Folklore, continuing its exploration of atmospheric folk and indie rock styles. The album is more experimental, incorporating chamber pop and alternative rock to deliver intricate, introspective character studies and rich, well-written stories."
   },
   {
     "id": 4,
     "albumName": "Justice",
     "artist": "Justin Bieber",
-    "image": "images/justice.webp",
+    "image": "/images/justice.webp",
     "price": "1 BHD",
-    "salesRanking": 7
+    "salesRanking": 7,
+    "description": "Justin Bieber's sixth studio album, Justice (2021), is a blend of pop, R&B, and dream pop, incorporating elements of 80s synth-pop and folk acoustic guitar. It is lyrically focused on themes of spiritual growth, love, and community, featuring chart-topping singles like 'Peaches,' 'Holy,' and 'Ghost'."
   },
   {
     "id": 5,
     "albumName": "Badlands",
     "artist": "Halsey",
-    "image": "images/badlands.webp",
+    "image": "/images/badlands.webp",
     "price": "1 BHD",
-    "salesRanking": 8
+    "salesRanking": 8,
+    "description": "Halsey's debut studio album, Badlands (2015), is a concept record within the genres of electropop, alt-pop, and synth-pop with industrial undertones. It uses the fictional dystopian city of 'The Badlands' as a metaphor for the artist's desolate and lonely state of mind, exploring themes of love, heartbreak, and mental struggle."
   },
   {
     "id": 6,
     "albumName": "Kiss",
     "artist": "Carly Rae Jepsen",
-    "image": "images/kiss.webp",
+    "image": "/images/kiss.webp",
     "price": "1 BHD",
-    "salesRanking": 9
+    "salesRanking": 9,
+    "description": "Carly Rae Jepsen's international debut, Kiss (2012), is an unabashedly feel-good pop record, driven by nu-disco, dance-pop, and teen pop influences. It is filled with pop hooks, simple riffs, and syrupy vocals, featuring her breakout global hit 'Call Me Maybe' and the successful collaboration 'Good Time' with Owl City."
   },
   {
     "id": 7,
     "albumName": "1989 (Taylor's Version)",
     "artist": "Taylor Swift",
-    "image": "images/1989ts.webp",
+    "image": "/images/1989ts.webp",
     "price": "1 BHD",
-    "salesRanking": 10
+    "salesRanking": 10,
+    "description": "1989 (Taylor's Version) (2023) is a synth-pop re-recording of the 2014 album, characterized by an upbeat, 1980s-inspired sound with a cleaner, more developed vocal performance. It features re-recordings of the original tracks plus five previously unreleased 'From the Vault' songs that maintain the album's kaleidoscopic feel."
   },
   {
     "id": 8,
     "albumName": "Recovery",
     "artist": "Eminem",
-    "image": "images/recovery.webp",
+    "image": "/images/recovery.webp",
     "price": "1 BHD",
-    "salesRanking": 11
+    "salesRanking": 11,
+    "description": "Eminem's seventh studio album, Recovery (2010), marks a shift from his previous work, featuring a more introspective and emotional lyrical content centered on his journey of overcoming drug addiction. It blends hip-hop with pop rap and alternative hip-hop, featuring powerful anthems like 'Not Afraid' and the hit collaboration 'Love the Way You Lie'."
   },
   {
     "id": 9,
     "albumName": "Guts",
     "artist": "Olivia Rodrigo",
-    "image": "images/guts.webp",
-    "imageOfTheMonth": "images/guts-vinyl.webp",
+    "image": "/images/guts.webp",
+    "imageOfTheMonth": "/images/guts-vinyl.webp",
     "price": "1 BHD",
     "salesRanking": 12,
     "description": "Olivia Rodrigo's sophomore album GUTS (2023) is a bold mix of pop rock, alt-pop, and punk-inspired energy, capturing the raw emotions of growing up, heartbreak, and self-discovery."
@@ -85,16 +94,18 @@
     "id": 10,
     "albumName": "Hybrid Theory",
     "artist": "Linkin Park",
-    "image": "images/hybrid-theory.webp",
+    "image": "/images/hybrid-theory.webp",
     "price": "1 BHD",
-    "salesRanking": 4
+    "salesRanking": 4,
+    "description": "Linkin Park's debut album, Hybrid Theory (2000), is a defining masterpiece of nu-metal, rap metal, and alternative rock. It innovatively fuses heavy rock with Mike Shinoda's raps and electronic elements, providing cathartic, emotionally honest anthems like 'In the End' and 'Crawling' about adolescent struggle and internal conflict."
   },
   {
     "id": 11,
     "albumName": "Better Dayz",
     "artist": "2PAC",
-    "image": "images/better-dayz.webp",
+    "image": "/images/better-dayz.webp",
     "price": "1 BHD",
-    "salesRanking": 3
+    "salesRanking": 3,
+    "description": "Better Dayz (2002) is a posthumous double album compiling previously unreleased material, mostly consisting of remixed tracks from 2Pac's 'Makaveli' period (1994 - 1996). The album blends hip hop, gangsta rap, and R&B, featuring a mix of introspective and hardcore tracks, including the successful singles 'Thugz Mansion' and 'Still Ballin'. "
   }
 ]
