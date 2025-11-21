@@ -15,4 +15,24 @@
   border-radius: 5rem;
   font-size: 1.8rem;
   font-family: 'Montserrat';
+  transition: all 0.3s ease;
+}
+
+.cartButton:hover {
+  cursor: pointer;
+  background-color: #fec240;
+}
+
+.quantityBtn {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.quantityBtn:hover {
+  cursor: pointer;
+}
+
+.quantityBtn:disabled {
+  cursor: not-allowed;
 }

@@ -8,6 +8,7 @@ import { Outlet } from 'react-router';
 function App() {
   const [albums, setAlbums] = useState([]);
   const [albumOfTheMonth, setAlbumOfTheMonth] = useState('');
+  const [cart, setCart] = useState([]);
   useEffect(() => {
     fetch('./data.json')
       .then((res) => res.json())
@@ -21,7 +22,7 @@ function App() {
     <div className='app-container'>
       <Header />
       <AnnouncementBanner />
-      <Outlet context={{ albums, albumOfTheMonth }} />
+      <Outlet context={{ albums, albumOfTheMonth, cart, setCart }} />
       <Footer />
     </div>
   );

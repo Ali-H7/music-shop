@@ -1,9 +1,10 @@
 import styles from './ProductDetails.module.css';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
 import { useParams, useOutletContext } from 'react-router';
+
 function ProductDetails() {
   const { id } = useParams();
-  const { albums } = useOutletContext();
+  const { albums, cart, setCart } = useOutletContext();
   const productId = Number(id);
   const album = albums.find((item) => item.id === productId);
 
@@ -17,7 +18,7 @@ function ProductDetails() {
             <p className={styles.price}>{`${album.price} BHD`}</p>
           </div>
           <p className={styles.description}>{album.description}</p>
-          <AddToCartButton />
+          <AddToCartButton albumId={album.id} cart={cart} cartSetter={setCart} />
         </div>
       </div>
     </div>

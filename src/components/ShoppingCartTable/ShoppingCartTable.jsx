@@ -4,8 +4,8 @@ import { SquareX } from 'lucide-react';
 import Quantity from '../Quantity/Quantity';
 
 function ShoppingCartTable() {
-  const { albumOfTheMonth } = useOutletContext();
-
+  const { albums, cart } = useOutletContext();
+  console.log(cart);
   return (
     <div className={styles.tableContainer}>
       <h1>Shopping Cart</h1>
@@ -19,26 +19,32 @@ function ShoppingCartTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <div className={styles.itemContainer}>
-                <img src={albumOfTheMonth.image} alt='' className={styles.image} />
-                <div className={styles.text}>
-                  <p className={styles.title}>{albumOfTheMonth.albumName}</p>
-                  <p className={styles.subText}>{albumOfTheMonth.artist}</p>
-                </div>
-              </div>
-            </td>
-            <td className={styles.subText}>{`${albumOfTheMonth.price} BHD`}</td>
-            <td className={styles.subText}>
-              <Quantity />
-            </td>
-            <td>
-              <div className={`${styles.delete} ${styles.subText}`}>
-                Delete <SquareX />
-              </div>
-            </td>
-          </tr>
+          {cart.map((itemRef) => {
+            const { id, quantity } = itemRef;
+            const album = albums.find((item) => item.id === id);
+            return (
+              <tr>
+                <td>
+                  <div className={styles.itemContainer}>
+                    <img src={album.image} alt='' className={styles.image} />
+                    <div className={styles.text}>
+                      <p className={styles.title}>{album.albumName}</p>
+                      <p className={styles.subText}>{album.artist}</p>
+                    </div>
+                  </div>
+                </td>
+                <td className={styles.subText}>{`${album.price} BHD`}</td>
+                <td className={styles.subText}>
+                  <Quantity count={quantity} />
+                </td>
+                <td>
+                  <div className={`${styles.delete} ${styles.subText}`}>
+                    Delete <SquareX />
+                  </div>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
