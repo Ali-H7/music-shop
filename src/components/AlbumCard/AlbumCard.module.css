@@ -1,0 +1,26 @@
+.albumCover {
+  width: 350px;
+}
+
+.albumTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  font-size: 1.6rem;
+}
+
+.ablumName:hover {
+  cursor: pointer;
+  color: #fee440;
+}
+
+.artistName,
+.price {
+  font-size: 1.8rem;
+  font-family: 'Montserrat';
+}
+
+.albumCover:hover {
+  cursor: pointer;
+}
