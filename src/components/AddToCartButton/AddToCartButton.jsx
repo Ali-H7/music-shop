@@ -11,6 +11,10 @@ function AddToCartButton({ albumId, cart, cartSetter }) {
     document.body.style.overflow = isCartOpen ? 'hidden' : 'auto';
   }, [isCartOpen]);
 
+  useEffect(() => {
+    if (cart.length === 0) handleCartPopUp();
+  }, [cart]);
+
   function handleCartPopUp() {
     setIsCartOpen((prev) => !prev);
   }

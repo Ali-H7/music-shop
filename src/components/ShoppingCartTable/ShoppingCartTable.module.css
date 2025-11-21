@@ -50,3 +50,10 @@ table {
 .deleteBtn:hover {
   cursor: pointer;
 }
+
+.emptyMessage {
+  text-align: center;
+  padding: 64px;
+  font-family: 'Montserrat';
+  font-size: 1.6rem;
+}

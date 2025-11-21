@@ -50,6 +50,7 @@ function ShoppingCartTable() {
           })}
         </tbody>
       </table>
+      {cart.length === 0 && <p className={styles.emptyMessage}>Looks like you haven't added anything yet!</p>}
     </div>
   );
 }
