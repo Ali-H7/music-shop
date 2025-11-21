@@ -1,0 +1,58 @@
+.module {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: #1e1e1e;
+  padding: 8px 16px;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cover {
+  max-width: 125px;
+}
+
+.product {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.products {
+  border-bottom: 1px solid #fff;
+  overflow-y: auto;
+  height: auto;
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.subText {
+  font-family: 'Montserrat';
+}
