@@ -40,3 +40,13 @@ table {
   align-items: center;
   gap: 8px;
 }
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+}

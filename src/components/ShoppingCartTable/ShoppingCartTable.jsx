@@ -1,11 +1,14 @@
 import styles from './ShoppingCartTable.module.css';
 import { useOutletContext } from 'react-router';
-import { SquareX } from 'lucide-react';
+import { Trash } from 'lucide-react';
 import Quantity from '../Quantity/Quantity';
 
 function ShoppingCartTable() {
-  const { albums, cart } = useOutletContext();
-  console.log(cart);
+  const { albums, cart, setCart } = useOutletContext();
+
+  function handleDeleteBtn(id) {
+    setCart((prev) => prev.filter((item) => item.id !== id));
+  }
   return (
     <div className={styles.tableContainer}>
       <h1>Shopping Cart</h1>
@@ -23,7 +26,7 @@ function ShoppingCartTable() {
             const { id, quantity } = itemRef;
             const album = albums.find((item) => item.id === id);
             return (
-              <tr>
+              <tr key={album.id}>
                 <td>
                   <div className={styles.itemContainer}>
                     <img src={album.image} alt='' className={styles.image} />
@@ -35,12 +38,12 @@ function ShoppingCartTable() {
                 </td>
                 <td className={styles.subText}>{`${album.price} BHD`}</td>
                 <td className={styles.subText}>
-                  <Quantity count={quantity} />
+                  <Quantity id={album.id} />
                 </td>
                 <td>
-                  <div className={`${styles.delete} ${styles.subText}`}>
-                    Delete <SquareX />
-                  </div>
+                  <button className={styles.deleteBtn} onClick={() => handleDeleteBtn(album.id)}>
+                    <Trash />
+                  </button>
                 </td>
               </tr>
             );

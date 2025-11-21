@@ -4,3 +4,13 @@
   gap: 8px;
   font-size: 1.6rem;
 }
+
+.button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.button:hover {
+  cursor: pointer;
+}

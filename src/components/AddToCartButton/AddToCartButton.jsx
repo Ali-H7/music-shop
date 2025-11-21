@@ -1,9 +1,19 @@
 import styles from './AddToCartButton.module.css';
 import { Plus, Minus } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import CartPopup from '../CartPopup/CartPopup';
 
 function AddToCartButton({ albumId, cart, cartSetter }) {
   const [count, setCount] = useState(1);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isCartOpen ? 'hidden' : 'auto';
+  }, [isCartOpen]);
+
+  function handleCartPopUp() {
+    setIsCartOpen((prev) => !prev);
+  }
 
   function decrementCount() {
     setCount((prevCount) => prevCount - 1);
@@ -35,6 +45,7 @@ function AddToCartButton({ albumId, cart, cartSetter }) {
         },
       ]);
     }
+    handleCartPopUp();
   }
 
   return (
@@ -51,6 +62,8 @@ function AddToCartButton({ albumId, cart, cartSetter }) {
       <button className={styles.cartButton} onClick={handleAddToCart}>
         Add to Cart
       </button>
+      {isCartOpen && <CartPopup handleCartPopUp={handleCartPopUp} />}
+      {isCartOpen && <div className={styles.overlay} onClick={handleCartPopUp}></div>}
     </div>
   );
 }

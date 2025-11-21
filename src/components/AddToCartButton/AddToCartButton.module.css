@@ -14,7 +14,6 @@
   border: none;
   border-radius: 5rem;
   font-size: 1.8rem;
-  font-family: 'Montserrat';
   transition: all 0.3s ease;
 }
 
@@ -35,4 +34,14 @@
 
 .quantityBtn:disabled {
   cursor: not-allowed;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }

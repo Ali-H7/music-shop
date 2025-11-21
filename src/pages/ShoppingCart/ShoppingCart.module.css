@@ -1,7 +1,6 @@
 .cartContainer {
   padding: 64px;
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 64px;
   font-size: 1.6rem;

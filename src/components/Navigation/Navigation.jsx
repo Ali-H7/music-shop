@@ -29,11 +29,17 @@ function Navigation() {
     <div className={styles.navigation}>
       {navigationMap.map((section, i) => {
         return (
-          <div className={styles.section}>
+          <div key={section + i} className={styles.section}>
             <h3 className={styles.title}>{section.title}</h3>
             <ul className={`${styles.list} ${i === 3 && styles.icons}`}>
               {section.list.map((item) => {
-                return i !== 3 ? <li className={styles.listItem}>{item}</li> : <li className={item}></li>;
+                return i !== 3 ? (
+                  <li key={item} className={styles.listItem}>
+                    {item}
+                  </li>
+                ) : (
+                  <li key={item} className={item}></li>
+                );
               })}
             </ul>
           </div>
