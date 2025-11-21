@@ -1,4 +1,4 @@
-import FanFavorites from '../components/FanFavorites/FanFavorites.jsx';
+import ProductList from '../components/ProductList/ProductList.jsx';
 import AlbumOfTheMonth from '../components/AlbumOfTheMonth/AlbumOfTheMonth.jsx';
 import Category from '../components/Category/Category.jsx';
 import Newsletter from '../components/Newsletter/Newsletter.jsx';
@@ -8,7 +8,7 @@ function Homepage() {
   const { albums, albumOfTheMonth } = useOutletContext();
   return (
     <>
-      <FanFavorites albums={albums} />
+      <ProductList albums={albums} />
       <AlbumOfTheMonth album={albumOfTheMonth} />
       <Category />
       <Newsletter />

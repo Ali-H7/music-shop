@@ -1,9 +1,11 @@
-import styles from './FanFavorites.module.css';
+import styles from './ProductList.module.css';
 import AlbumCard from '../AlbumCard/AlbumCard';
-function FanFavorites({ albums }) {
+
+function ProductList({ albums }) {
   const topAlbums = albums.slice(0, 4);
+
   return (
-    <div className={styles.fanFavorites}>
+    <div className={styles.productList}>
       <h2 className={styles.title}>Fan Favorites</h2>
       <div className={styles.cards}>
         {topAlbums.map((album) => {
@@ -14,4 +16,4 @@ function FanFavorites({ albums }) {
   );
 }
 
-export default FanFavorites;
+export default ProductList;
