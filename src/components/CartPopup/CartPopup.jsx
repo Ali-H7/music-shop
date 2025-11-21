@@ -23,7 +23,7 @@ function CartPopup({ handleCartPopUp }) {
               <img className={styles.cover} src={album.image} alt='Album Cover' />
               <div className={styles.productInfo}>
                 <p>{album.albumName}</p>
-                <p className={styles.subText}>{`${album.price} BHD`}</p>
+                <p className={styles.subText}>{`${album.price.toFixed(3)} BHD`}</p>
                 <Quantity id={album.id} />
               </div>
             </div>

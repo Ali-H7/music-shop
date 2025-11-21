@@ -15,7 +15,7 @@ function ProductDetails() {
         <div className={styles.details}>
           <div>
             <h3>{`${album.albumName} - ${album.artist}`}</h3>
-            <p className={styles.price}>{`${album.price} BHD`}</p>
+            <p className={styles.price}>{`${album.price.toFixed(3)} BHD`}</p>
           </div>
           <p className={styles.description}>{album.description}</p>
           <AddToCartButton albumId={album.id} cart={cart} cartSetter={setCart} />

@@ -16,7 +16,7 @@ function FanFavorites({ albums }) {
                 <Link to={`/product/${album.id}`}>
                   <h3 className={styles.ablumName}>{album.albumName}</h3>
                 </Link>
-                <p className={styles.price}>{`${album.price} BHD`}</p>
+                <p className={styles.price}>{`${album.price.toFixed(3)} BHD`}</p>
               </div>
               <p className={styles.artistName}>{album.artist}</p>
             </div>
