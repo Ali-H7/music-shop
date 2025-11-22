@@ -1,0 +1,8 @@
+.sort {
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+  font-family: 'Montserrat';
+  flex-grow: 1;
+  max-width: 300px;
+}

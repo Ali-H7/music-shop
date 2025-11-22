@@ -1,7 +1,6 @@
 .productList {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 16px;
   padding: 32px 32px 64px;
@@ -14,15 +13,18 @@
   letter-spacing: 4px;
 }
 
-.cards {
+.cardsContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
 
 .card {
   max-width: 350px;
-  padding-bottom: 32px;
 }

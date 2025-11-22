@@ -12,7 +12,7 @@ function AddToCartButton({ albumId, cart, cartSetter }) {
   }, [isCartOpen]);
 
   useEffect(() => {
-    if (cart.length === 0) handleCartPopUp();
+    if (cart.length === 0 && isCartOpen) setIsCartOpen(false);
   }, [cart]);
 
   function handleCartPopUp() {
