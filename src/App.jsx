@@ -25,7 +25,7 @@ function App() {
       <Header quantity={itemQuantity} />
       <AnnouncementBanner />
       <Outlet context={{ albums, albumOfTheMonth, cart, setCart, itemQuantity }} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -7,14 +7,16 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 8px;
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 1vw, 1.6rem);
+  gap: 16px;
 }
 
 .ablumName {
+  flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 240px;
+  max-width: 100%;
 }
 .ablumName:hover {
   cursor: pointer;
@@ -23,10 +25,20 @@
 
 .artistName,
 .price {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: 'Montserrat';
 }
 
 .albumCover:hover {
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .albumTitle {
+    flex-direction: column;
+    gap: 0;
+  }
+  .artistName {
+    display: none;
+  }
 }

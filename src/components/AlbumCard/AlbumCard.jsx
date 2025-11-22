@@ -8,9 +8,11 @@ function albumCard({ album }) {
         <img src={album.image} className={styles.albumCover} />
       </Link>
       <div className={styles.albumTitle}>
-        <Link to={`/product/${album.id}`}>
-          <h3 className={styles.ablumName}>{album.albumName}</h3>
-        </Link>
+        <div className={styles.ablumName}>
+          <Link to={`/product/${album.id}`}>
+            <h3 className={styles.ablumName}>{album.albumName}</h3>
+          </Link>
+        </div>
         <p className={styles.price}>{`${album.price.toFixed(3)} BHD`}</p>
       </div>
       <p className={styles.artistName}>{album.artist}</p>
