@@ -1,10 +1,8 @@
 .imageContainer {
   position: relative;
+  max-width: 450px;
 }
 
-.image {
-  width: 450px;
-}
 .text {
   position: absolute;
   bottom: 0px;

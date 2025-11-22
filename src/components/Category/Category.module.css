@@ -5,3 +5,14 @@
   gap: 32px;
   padding: 64px;
 }
+
+@media (max-width: 1250px) {
+  .category > :first-child {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  .category {
+    flex-direction: column;
+  }
+}
