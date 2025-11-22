@@ -5,10 +5,10 @@ import Newsletter from '../components/Newsletter/Newsletter.jsx';
 import { useOutletContext } from 'react-router';
 
 function Homepage() {
-  const { albums, albumOfTheMonth } = useOutletContext();
+  const { albumOfTheMonth } = useOutletContext();
   return (
     <>
-      <ProductList albums={albums} />
+      <ProductList headingsTitle={'Fan Favorites'} />
       <AlbumOfTheMonth album={albumOfTheMonth} />
       <Category />
       <Newsletter />
