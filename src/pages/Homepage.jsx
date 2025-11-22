@@ -9,8 +9,8 @@ function Homepage() {
   return (
     <>
       <ProductList headingsTitle={'Fan Favorites'} />
-      {/* <AlbumOfTheMonth album={albumOfTheMonth} />
-      <Category />
+      <AlbumOfTheMonth album={albumOfTheMonth} />
+      {/* <Category />
       <Newsletter /> */}
     </>
   );

@@ -8,20 +8,22 @@
 }
 
 .albumCover {
+  display: flex;
   max-width: 700px;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .textContainer {
   display: flex;
   flex-direction: column;
-  max-width: 530px;
-  font-size: 1.6rem;
+  max-width: clamp(300px, 30vw, 530px);
   gap: 8px;
 }
 
 .textDescription {
   font-family: 'Montserrat';
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 4vw, 2rem);
   padding-bottom: 8px;
 }
 
@@ -30,4 +32,28 @@
   border: none;
   height: 40px;
   border-radius: 5rem;
+  font-size: 1.6rem;
+}
+
+.toggleFirstBtn {
+  display: none;
+}
+@media (max-width: 1005px) {
+  .albumOfTheMonthContainer {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .textContainer {
+    order: -1;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .toggleFirstBtn {
+    display: block;
+  }
+
+  .toggleSecondBtn {
+    display: none;
+  }
 }
