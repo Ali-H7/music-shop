@@ -25,6 +25,29 @@
   font-size: 2.4rem;
 }
 
+.cartContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.qunatity {
+  background-color: #9b5de5;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: 'Montserrat';
+  padding: 16px;
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
 /* @media (max-width: 800px) {
   .nav {
     flex-direction: column;

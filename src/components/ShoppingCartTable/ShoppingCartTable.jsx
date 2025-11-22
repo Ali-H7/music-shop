@@ -36,7 +36,7 @@ function ShoppingCartTable() {
                     </div>
                   </div>
                 </td>
-                <td className={styles.subText}>{`${album.price.toFixed(3)} BHD`}</td>
+                <td className={styles.subText}>{`${(album.price * quantity).toFixed(3)} BHD`}</td>
                 <td className={styles.subText}>
                   <Quantity id={album.id} />
                 </td>

@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 import { Link } from 'react-router';
-function Header() {
+function Header({ quantity }) {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -9,10 +9,17 @@ function Header() {
           <Link to='/'>
             <li>Home</li>
           </Link>
-          <li>Shop</li>
-          <Link to='/cart/'>
-            <li>Cart</li>
+          <Link to='/shop/'>
+            <li>Shop</li>
           </Link>
+          <div className={styles.cartContainer}>
+            <Link to='/cart/'>
+              <li>Cart</li>
+            </Link>
+            <div className={`${styles.qunatity} ${quantity > 0 && styles.show}`}>
+              <p>{quantity}</p>
+            </div>
+          </div>
         </ul>
       </nav>
     </header>

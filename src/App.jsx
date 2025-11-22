@@ -9,6 +9,8 @@ function App() {
   const [albums, setAlbums] = useState([]);
   const [albumOfTheMonth, setAlbumOfTheMonth] = useState('');
   const [cart, setCart] = useState([]);
+  const itemQuantity = cart.map((item) => item.quantity).reduce((a, b) => a + b, 0);
+
   useEffect(() => {
     fetch('./data.json')
       .then((res) => res.json())
@@ -20,9 +22,9 @@ function App() {
   }, []);
   return (
     <div className='app-container'>
-      <Header />
+      <Header quantity={itemQuantity} />
       <AnnouncementBanner />
-      <Outlet context={{ albums, albumOfTheMonth, cart, setCart }} />
+      <Outlet context={{ albums, albumOfTheMonth, cart, setCart, itemQuantity }} />
       <Footer />
     </div>
   );

@@ -1,7 +1,7 @@
 import styles from './OrderSummary.module.css';
 import { useOutletContext } from 'react-router';
 function OrderSummary() {
-  const { cart, albums } = useOutletContext();
+  const { cart, albums, itemQuantity } = useOutletContext();
 
   const subTotal = cart
     .map((itemReference) => {
@@ -9,7 +9,7 @@ function OrderSummary() {
       return album.price * itemReference.quantity;
     })
     .reduce((a, b) => a + b, 0);
-  const shipping = cart.map((item) => item.quantity).reduce((a, b) => a + b, 0) * 0.2;
+  const shipping = itemQuantity * 0.2;
   const vat = subTotal * 0.1;
   const total = subTotal + shipping + vat;
 
