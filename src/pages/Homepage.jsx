@@ -10,8 +10,8 @@ function Homepage() {
     <>
       <ProductList headingsTitle={'Fan Favorites'} />
       <AlbumOfTheMonth album={albumOfTheMonth} />
-      {/* <Category />
-      <Newsletter /> */}
+      {/* <Category /> */}
+      <Newsletter />
     </>
   );
 }
