@@ -1,6 +1,7 @@
 import App from './App';
 import Homepage from './pages/Homepage';
 import Product from './pages/Product';
+import Shop from './pages/Shop';
 import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
 const routes = [
   {
@@ -14,6 +15,10 @@ const routes = [
       {
         path: 'product/:id',
         element: <Product />,
+      },
+      {
+        path: 'shop',
+        element: <Shop />,
       },
       {
         path: 'cart',
