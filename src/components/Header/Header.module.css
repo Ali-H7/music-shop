@@ -15,7 +15,7 @@
 
 .logo {
   color: #9b5de5;
-  font-size: 4.8rem;
+  font-size: clamp(3rem, 8vw, 4.8rem);
 }
 
 .list {
@@ -48,9 +48,65 @@
   visibility: visible;
 }
 
-/* @media (max-width: 800px) {
+/* mobile */
+
+.menu {
+  display: none;
+}
+
+.closeIcon {
+  display: none;
+}
+
+@media (max-width: 900px) {
   .nav {
-    flex-direction: column;
-    justify-content: center;
+    gap: 24px;
   }
-} */
+  .menu {
+    display: block;
+  }
+  .listContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .closeIcon {
+    display: flex;
+    padding: 32px;
+    justify-content: flex-end;
+  }
+  .list {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    padding: 64px;
+  }
+
+  .qunatity {
+    position: absolute;
+    margin-left: 98px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .button {
+    background: none;
+    border: none;
+    color: #fff;
+  }
+
+  .button:hover {
+    cursor: pointer;
+  }
+}
