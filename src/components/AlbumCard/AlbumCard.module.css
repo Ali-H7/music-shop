@@ -10,6 +10,12 @@
   font-size: 1.6rem;
 }
 
+.ablumName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
 .ablumName:hover {
   cursor: pointer;
   color: #fee440;
