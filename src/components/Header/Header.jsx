@@ -25,14 +25,14 @@ function Header({ quantity }) {
             </button>
           </div>
           <ul className={styles.list}>
-            <Link to='/' onClick={toggleMenu}>
+            <Link to='/' onClick={isMenuOpen && toggleMenu}>
               <li>Home</li>
             </Link>
-            <Link to='/shop/' onClick={toggleMenu}>
+            <Link to='/shop/' onClick={isMenuOpen && toggleMenu}>
               <li>Shop</li>
             </Link>
             <div className={styles.cartContainer}>
-              <Link to='/cart/' onClick={toggleMenu}>
+              <Link to='/cart/' onClick={isMenuOpen && toggleMenu}>
                 <li>Cart</li>
               </Link>
               <div className={`${styles.qunatity} ${quantity > 0 && styles.show}`}>
