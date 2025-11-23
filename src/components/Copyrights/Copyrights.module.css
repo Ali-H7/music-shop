@@ -1,18 +1,27 @@
 .copyrights {
   padding: 8px;
-  font-size: 1.6rem;
+  font-size: clamp(1.55rem, 4.3vw, 1.6rem);
   font-family: 'Montserrat';
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: #9b5de5;
-  gap: 8px;
+  gap: 4px;
+  text-align: center;
 }
 
 a:link,
 a:visited {
   color: #fff;
   text-decoration: none;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .name {
