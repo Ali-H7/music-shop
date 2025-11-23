@@ -26,23 +26,25 @@ function ProductList({ headingsTitle }) {
   }
 
   return (
-    <div className={styles.productList}>
-      <h2 className={styles.title}>{headingsTitle}</h2>
-      {headingsTitle !== 'Fan Favorites' && <Sort sortValueSetter={setSortValue} />}
-      <div className={styles.cards}>
-        {albumsToDisplay.map((album, i) => {
-          return (
-            <div
-              key={album.id}
-              className={`${styles.card} ${i === 3 && headingsTitle === 'Fan Favorites' ? styles.hide : ''}`}
-            >
-              <AlbumCard album={album} />
-              {headingsTitle !== 'Fan Favorites' && (
-                <AddToCartButton albumId={album.id} cart={cart} cartSetter={setCart} />
-              )}
-            </div>
-          );
-        })}
+    <div className={styles.productListContainer}>
+      <div className={styles.productList}>
+        <h2 className={styles.title}>{headingsTitle}</h2>
+        {headingsTitle !== 'Fan Favorites' && <Sort sortValueSetter={setSortValue} />}
+        <div className={styles.cards}>
+          {albumsToDisplay.map((album, i) => {
+            return (
+              <div
+                key={album.id}
+                className={`${styles.card} ${i === 3 && headingsTitle === 'Fan Favorites' ? styles.hide : ''}`}
+              >
+                <AlbumCard album={album} />
+                {headingsTitle !== 'Fan Favorites' && (
+                  <AddToCartButton albumId={album.id} cart={cart} cartSetter={setCart} />
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

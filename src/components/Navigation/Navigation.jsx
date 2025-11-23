@@ -3,7 +3,7 @@ import { Plus, Minus } from 'lucide-react';
 import { useState } from 'react';
 
 function Navigation() {
-  const [expandedSection, setExpandedSection] = useState([false, false, false, false]);
+  const [expandedSection, setExpandedSection] = useState([false, false, false]);
 
   function toggleSection(index) {
     const newState = [...expandedSection];
@@ -41,17 +41,17 @@ function Navigation() {
         {navigationMap.map((section, i) => {
           return (
             <div key={section + i} className={styles.section}>
-              <button className={styles.expandButton} onClick={() => toggleSection(i)}>
-                <div className={`${styles.titleContainer} ${i === 3 ? styles.hide : ''}`}>
-                  <h3 className={styles.title}>{section.title}</h3>
-                  {i !== 3 && (
+              <div className={`${styles.titleContainer} ${i === 3 ? styles.hide : ''}`}>
+                <h3 className={styles.title}>{section.title}</h3>
+                {i !== 3 && (
+                  <button className={styles.expandButton} onClick={() => toggleSection(i)}>
                     <div className={styles.expandIcon}>
                       {!expandedSection[i] && <Plus />}
                       {expandedSection[i] && <Minus />}
                     </div>
-                  )}
-                </div>
-              </button>
+                  </button>
+                )}
+              </div>
 
               {
                 <ul

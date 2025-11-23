@@ -44,6 +44,7 @@
   background: none;
   border: none;
   color: #fff;
+  display: none;
 }
 
 .expandButton:hover {
@@ -70,6 +71,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 8px;
+  }
+
+  .expandButton {
+    display: block;
   }
 
   .expandIcon {
