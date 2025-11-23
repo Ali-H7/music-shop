@@ -10,12 +10,18 @@
   display: flex;
   gap: 48px;
 }
+
+.imageContainer {
+  flex: 1;
+}
 .details {
   display: flex;
   flex-direction: column;
   gap: 16px;
   max-width: 500px;
   padding-top: 32px;
+  font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+  flex: 1;
 }
 
 .price {
@@ -24,4 +30,12 @@
 
 .description {
   font-family: 'Montserrat';
+}
+
+@media (max-width: 870px) {
+  .productCard {
+    flex-direction: column;
+    font-size: 1.6rem;
+    gap: 8px;
+  }
 }

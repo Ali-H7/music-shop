@@ -11,7 +11,9 @@ function ProductDetails() {
   return (
     <div className={styles.container}>
       <div className={styles.productCard}>
-        <img src={album.image} alt='Album cover' />
+        <div className={styles.imageContainer}>
+          <img src={album.image} alt='Album cover' />
+        </div>
         <div className={styles.details}>
           <div>
             <h3>{`${album.albumName} - ${album.artist}`}</h3>
