@@ -1,6 +1,16 @@
 import styles from './Navigation.module.css';
+import { Plus, Minus } from 'lucide-react';
+import { useState } from 'react';
 
 function Navigation() {
+  const [expandedSection, setExpandedSection] = useState([false, false, false, false]);
+
+  function toggleSection(index) {
+    const newState = [...expandedSection];
+    newState[index] = !newState[index];
+    setExpandedSection(newState);
+  }
+
   const navigationMap = [
     {
       title: 'Info',
@@ -26,25 +36,42 @@ function Navigation() {
   ];
 
   return (
-    <div className={styles.navigation}>
-      {navigationMap.map((section, i) => {
-        return (
-          <div key={section + i} className={styles.section}>
-            <h3 className={styles.title}>{section.title}</h3>
-            <ul className={`${styles.list} ${i === 3 && styles.icons}`}>
-              {section.list.map((item) => {
-                return i !== 3 ? (
-                  <li key={item} className={styles.listItem}>
-                    {item}
-                  </li>
-                ) : (
-                  <li key={item} className={item}></li>
-                );
-              })}
-            </ul>
-          </div>
-        );
-      })}
+    <div className={styles.navigationContainer}>
+      <div className={styles.navigation}>
+        {navigationMap.map((section, i) => {
+          return (
+            <div key={section + i} className={styles.section}>
+              <button className={styles.expandButton} onClick={() => toggleSection(i)}>
+                <div className={`${styles.titleContainer} ${i === 3 ? styles.hide : ''}`}>
+                  <h3 className={styles.title}>{section.title}</h3>
+                  {i !== 3 && (
+                    <div className={styles.expandIcon}>
+                      {!expandedSection[i] && <Plus />}
+                      {expandedSection[i] && <Minus />}
+                    </div>
+                  )}
+                </div>
+              </button>
+
+              {
+                <ul
+                  className={`${styles.list} ${i === 3 ? styles.icons : ''} ${!expandedSection[i] && i !== 3 ? styles.hide : ''}`}
+                >
+                  {section.list.map((item) => {
+                    return i !== 3 ? (
+                      <li key={item} className={styles.listItem}>
+                        {item}
+                      </li>
+                    ) : (
+                      <li key={item} className={item}></li>
+                    );
+                  })}
+                </ul>
+              }
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
