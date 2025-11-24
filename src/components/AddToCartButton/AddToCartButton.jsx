@@ -56,11 +56,16 @@ function AddToCartButton({ albumId, cart, cartSetter }) {
   return (
     <div className='add-to-cart'>
       <div className={styles.count}>
-        <button className={styles.quantityBtn} onClick={decrementCount} disabled={count <= 1}>
+        <button
+          className={styles.quantityBtn}
+          onClick={decrementCount}
+          disabled={count <= 1}
+          aria-label='decrease quantity'
+        >
           <Minus />
         </button>
         <p>{count}</p>
-        <button className={styles.quantityBtn} onClick={inceraseCount}>
+        <button className={styles.quantityBtn} onClick={inceraseCount} aria-label='increase quantity'>
           <Plus />
         </button>
       </div>
