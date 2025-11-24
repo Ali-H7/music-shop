@@ -22,7 +22,9 @@ function Header({ quantity }) {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <h1 className={styles.logo}>Music Shop</h1>
+        <Link to='/'>
+          <h1 className={styles.logo}>Music Shop</h1>
+        </Link>
         <div className={styles.menu}>
           <button className={styles.button} onClick={toggleMenu}>
             <Menu size={32} />
