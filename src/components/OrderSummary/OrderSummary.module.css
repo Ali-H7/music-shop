@@ -1,6 +1,5 @@
 .summaryContainer {
   font-family: 'Montserrat';
-  flex-grow: 1;
   max-width: 350px;
 }
 
@@ -8,6 +7,7 @@
   text-align: center;
   padding-bottom: 16px;
   font-family: 'Akira Expanded';
+  font-size: clamp(1.8rem, 5.1vw, 2.4rem);
 }
 
 .price,
@@ -42,4 +42,14 @@
   text-align: center;
   padding: 16px;
   color: #9b5de5;
+}
+
+@media (max-width: 1100px) {
+  .cartContainer {
+    flex-direction: column;
+  }
+  .summaryContainer {
+    max-width: 700px;
+    width: 100%;
+  }
 }

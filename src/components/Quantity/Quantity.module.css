@@ -9,6 +9,7 @@
   background: none;
   border: none;
   color: #fff;
+  min-width: 24px;
 }
 
 .button:hover {

@@ -3,6 +3,10 @@
   flex-grow: 1;
 }
 
+.tableContainer h1 {
+  font-size: clamp(2.8rem, 6vw, 3.2rem);
+}
+
 table {
   border-collapse: collapse;
 }
@@ -14,7 +18,7 @@ th {
 th,
 td {
   text-align: left;
-  padding: 16px 0;
+  padding: 16px 8px;
 }
 
 table {
@@ -30,6 +34,7 @@ table {
   display: flex;
   gap: 16px;
   align-items: center;
+  font-size: 14px;
 }
 .image {
   max-width: 100px;
@@ -45,6 +50,7 @@ table {
   background: none;
   border: none;
   color: #fff;
+  min-width: 24px;
 }
 
 .deleteBtn:hover {
@@ -56,4 +62,27 @@ table {
   padding: 64px;
   font-family: 'Montserrat';
   font-size: 1.6rem;
+}
+
+/*  mobile */
+
+.firstPrice {
+  display: none;
+}
+
+@media (max-width: 590px) {
+  .tableContainer h1 {
+    justify-self: center;
+    padding-bottom: 16px;
+  }
+  thead {
+    display: none;
+  }
+  .firstPrice {
+    display: block;
+  }
+
+  .secondPrice {
+    display: none;
+  }
 }

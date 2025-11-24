@@ -33,10 +33,15 @@ function ShoppingCartTable() {
                     <div className={styles.text}>
                       <p className={styles.title}>{album.albumName}</p>
                       <p className={styles.subText}>{album.artist}</p>
+                      <p
+                        className={`${styles.subText} ${styles.firstPrice}`}
+                      >{`${(album.price * quantity).toFixed(3)} BHD`}</p>
                     </div>
                   </div>
                 </td>
-                <td className={styles.subText}>{`${(album.price * quantity).toFixed(3)} BHD`}</td>
+                <td
+                  className={`${styles.subText} ${styles.secondPrice}`}
+                >{`${(album.price * quantity).toFixed(3)} BHD`}</td>
                 <td className={styles.subText}>
                   <Quantity id={album.id} />
                 </td>
