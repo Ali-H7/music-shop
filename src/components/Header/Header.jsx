@@ -1,13 +1,22 @@
 import styles from './Header.module.css';
 import { Link } from 'react-router';
 import { Menu, SquareX } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 function Header({ quantity }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   }
+
+  //  disable scolling when menu open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMenuOpen]);
 
   return (
     <header className={styles.header}>
