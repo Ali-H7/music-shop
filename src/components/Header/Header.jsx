@@ -2,6 +2,7 @@ import styles from './Header.module.css';
 import { Link } from 'react-router';
 import { Menu, SquareX } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 function Header({ quantity }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -54,5 +55,9 @@ function Header({ quantity }) {
     </header>
   );
 }
+
+Header.propTypes = {
+  quantity: PropTypes.number.isRequired,
+};
 
 export default Header;

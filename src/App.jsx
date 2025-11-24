@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router';
 function App() {
   const [albums, setAlbums] = useState([]);
-  const [albumOfTheMonth, setAlbumOfTheMonth] = useState('');
+  const [albumOfTheMonth, setAlbumOfTheMonth] = useState(null);
   const [cart, setCart] = useState([]);
   const itemQuantity = cart.map((item) => item.quantity).reduce((a, b) => a + b, 0);
 

@@ -1,7 +1,8 @@
 import styles from './AlbumCard.module.css';
 import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 
-function albumCard({ album }) {
+function AlbumCard({ album }) {
   return (
     <div>
       <Link to={`/product/${album.id}`}>
@@ -20,4 +21,16 @@ function albumCard({ album }) {
   );
 }
 
-export default albumCard;
+AlbumCard.propTypes = {
+  album: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    albumName: PropTypes.string.isRequired,
+    artist: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    salesRanking: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+  }),
+};
+
+export default AlbumCard;

@@ -1,5 +1,6 @@
 import styles from './CartPopup.module.css';
 import { useOutletContext } from 'react-router';
+import PropTypes from 'prop-types';
 import Quantity from '../Quantity/Quantity';
 import { SquareX } from 'lucide-react';
 import OrderSummary from '../OrderSummary/OrderSummary';
@@ -36,5 +37,9 @@ function CartPopup({ handleCartPopUp }) {
     </div>
   );
 }
+
+CartPopup.propTypes = {
+  handleCartPopUp: PropTypes.func.isRequired,
+};
 
 export default CartPopup;

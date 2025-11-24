@@ -4,6 +4,7 @@ import Sort from '../Sort/Sort';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
 import { useOutletContext } from 'react-router';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 function ProductList({ headingsTitle }) {
   const { albums, cart, setCart } = useOutletContext();
@@ -49,5 +50,9 @@ function ProductList({ headingsTitle }) {
     </div>
   );
 }
+
+ProductList.propTypes = {
+  headingsTitle: PropTypes.string.isRequired,
+};
 
 export default ProductList;

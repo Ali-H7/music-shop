@@ -1,5 +1,5 @@
 import styles from './CategoryCard.module.css';
-
+import PropTypes from 'prop-types';
 function CategoryCard({ image, mainText }) {
   return (
     <div className={styles.imageContainer}>
@@ -11,5 +11,10 @@ function CategoryCard({ image, mainText }) {
     </div>
   );
 }
+
+CategoryCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  mainText: PropTypes.string.isRequired,
+};
 
 export default CategoryCard;

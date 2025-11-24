@@ -1,4 +1,5 @@
 import styles from './Sort.module.css';
+import PropTypes from 'prop-types';
 
 function Sort({ sortValueSetter }) {
   return (
@@ -14,5 +15,9 @@ function Sort({ sortValueSetter }) {
     </div>
   );
 }
+
+Sort.propTypes = {
+  sortValueSetter: PropTypes.func.isRequired,
+};
 
 export default Sort;

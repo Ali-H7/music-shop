@@ -1,6 +1,7 @@
 import styles from './AddToCartButton.module.css';
 import { Plus, Minus } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import CartPopup from '../CartPopup/CartPopup';
 
 function AddToCartButton({ albumId, cart, cartSetter }) {
@@ -71,5 +72,16 @@ function AddToCartButton({ albumId, cart, cartSetter }) {
     </div>
   );
 }
+
+AddToCartButton.propTypes = {
+  albumId: PropTypes.number.isRequired,
+  cart: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      quantity: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+  cartSetter: PropTypes.func.isRequired,
+};
 
 export default AddToCartButton;

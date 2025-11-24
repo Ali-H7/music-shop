@@ -1,6 +1,7 @@
 import styles from './Quantity.module.css';
 import { Minus, Plus } from 'lucide-react';
 import { useOutletContext } from 'react-router';
+import PropTypes from 'prop-types';
 
 function Quantity({ id }) {
   const { cart, setCart } = useOutletContext();
@@ -34,5 +35,9 @@ function Quantity({ id }) {
     </div>
   );
 }
+
+Quantity.propTypes = {
+  id: PropTypes.number.isRequired,
+};
 
 export default Quantity;
