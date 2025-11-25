@@ -19,6 +19,11 @@ function SearchBar({ searchQuery, searchSetter }) {
         placeholder='Search'
         onFocus={() => navigate('/shop/')}
         onChange={(e) => handleInput(e.target.value)}
+        onBlur={() =>
+          setTimeout(() => {
+            searchSetter('');
+          }, 200)
+        }
       />
       {searchQuery && (
         <button className={styles.clearIcon} onClick={() => searchSetter('')}>
