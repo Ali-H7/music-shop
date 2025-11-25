@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className='app-container'>
-      <Header quantity={itemQuantity} searchSetter={setSearchQuery} />
+      <Header quantity={itemQuantity} searchQuery={searchQuery} searchSetter={setSearchQuery} />
       <AnnouncementBanner />
       <Outlet context={{ albums, albumOfTheMonth, cart, setCart, itemQuantity, searchQuery }} />
       <Footer />

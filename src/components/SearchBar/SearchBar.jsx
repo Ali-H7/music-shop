@@ -1,8 +1,8 @@
 import styles from './SearchBar.module.css';
-import { Search } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router';
 
-function SearchBar({ searchSetter }) {
+function SearchBar({ searchQuery, searchSetter }) {
   const navigate = useNavigate();
 
   function handleInput(userInput) {
@@ -14,12 +14,17 @@ function SearchBar({ searchSetter }) {
     <div className={styles.searchContainer}>
       <Search className={styles.searchIcon} />
       <input
+        value={searchQuery}
         className={styles.search}
-        type='search'
         placeholder='Search'
         onFocus={() => navigate('/shop/')}
         onChange={(e) => handleInput(e.target.value)}
       />
+      {searchQuery && (
+        <button className={styles.clearIcon} onClick={() => searchSetter('')}>
+          <X />
+        </button>
+      )}
     </div>
   );
 }

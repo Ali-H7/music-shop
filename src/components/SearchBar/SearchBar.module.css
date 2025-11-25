@@ -6,7 +6,7 @@
 
 .searchIcon {
   position: absolute;
-  bottom: 10px;
+  bottom: 9px;
   left: 8px;
   color: #a4133c;
 }
@@ -22,6 +22,16 @@
   width: 100%;
 }
 
-.search::-webkit-search-cancel-button {
+.clearIcon {
+  position: absolute;
+  max-width: 24px;
+  background: none;
+  border: none;
+  bottom: 9px;
+  right: 8px;
+  color: #fff;
+}
+
+.clearIcon:hover {
   cursor: pointer;
 }
