@@ -7,23 +7,31 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 function ProductList({ headingsTitle }) {
-  const { albums, cart, setCart } = useOutletContext();
+  const { albums, cart, setCart, searchQuery } = useOutletContext();
   const [sortValue, setSortValue] = useState('featured');
 
-  let albumsToDisplay;
+  let albumsToDisplay = [...albums];
+
+  if (searchQuery !== '' && headingsTitle !== 'FAN FAVORITES') {
+    albumsToDisplay = [...albums].filter((item) => {
+      if (searchQuery === '') {
+        return false;
+      } else {
+        return item.albumName.toLowerCase().includes(searchQuery) || item.artist.toLowerCase().includes(searchQuery);
+      }
+    });
+  }
 
   if (headingsTitle === 'FAN FAVORITES') {
-    albumsToDisplay = albums.slice(0, 4);
+    albumsToDisplay = albumsToDisplay.slice(0, 4);
   } else if (sortValue === 'az') {
-    albumsToDisplay = [...albums].sort((a, b) => a.albumName.localeCompare(b.albumName));
+    albumsToDisplay = [...albumsToDisplay].sort((a, b) => a.albumName.localeCompare(b.albumName));
   } else if (sortValue === 'za') {
-    albumsToDisplay = [...albums].sort((a, b) => b.albumName.localeCompare(a.albumName));
+    albumsToDisplay = [...albumsToDisplay].sort((a, b) => b.albumName.localeCompare(a.albumName));
   } else if (sortValue === 'low') {
-    albumsToDisplay = [...albums].sort((a, b) => a.price - b.price);
+    albumsToDisplay = [...albumsToDisplay].sort((a, b) => a.price - b.price);
   } else if (sortValue === 'high') {
-    albumsToDisplay = [...albums].sort((a, b) => b.price - a.price);
-  } else {
-    albumsToDisplay = [...albums];
+    albumsToDisplay = [...albumsToDisplay].sort((a, b) => b.price - a.price);
   }
 
   return (

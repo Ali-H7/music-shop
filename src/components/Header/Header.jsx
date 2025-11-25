@@ -1,9 +1,11 @@
 import styles from './Header.module.css';
+import SearchBar from '../SearchBar/SearchBar';
 import { Link } from 'react-router';
 import { Menu, SquareX } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-function Header({ quantity }) {
+
+function Header({ quantity, searchSetter }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -17,6 +19,10 @@ function Header({ quantity }) {
     } else {
       document.body.style.overflow = 'auto';
     }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
   }, [isMenuOpen]);
 
   return (
@@ -25,6 +31,7 @@ function Header({ quantity }) {
         <Link to='/'>
           <h1 className={styles.logo}>MUSIC SHOP</h1>
         </Link>
+        <SearchBar searchSetter={searchSetter} />
         <div className={styles.menu}>
           <button className={styles.button} onClick={toggleMenu}>
             <Menu size={32} />

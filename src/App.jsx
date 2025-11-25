@@ -10,6 +10,7 @@ function App() {
   const [albumOfTheMonth, setAlbumOfTheMonth] = useState(null);
   const [cart, setCart] = useState([]);
   const itemQuantity = cart.map((item) => item.quantity).reduce((a, b) => a + b, 0);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     fetch('./data.json')
@@ -20,11 +21,12 @@ function App() {
         setAlbumOfTheMonth(sortedAlbums[11]);
       });
   }, []);
+
   return (
     <div className='app-container'>
-      <Header quantity={itemQuantity} />
+      <Header quantity={itemQuantity} searchSetter={setSearchQuery} />
       <AnnouncementBanner />
-      <Outlet context={{ albums, albumOfTheMonth, cart, setCart, itemQuantity }} />
+      <Outlet context={{ albums, albumOfTheMonth, cart, setCart, itemQuantity, searchQuery }} />
       <Footer />
     </div>
   );
