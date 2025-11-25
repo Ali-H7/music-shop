@@ -1,0 +1,17 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  gap: 16px;
+  padding: 16px;
+  padding-top: 15vh;
+  text-align: center;
+}
+
+.homepageText {
+  border-bottom: 1px solid #a4133c;
+}
+.homepageText:hover {
+  color: #a4133c;
+}

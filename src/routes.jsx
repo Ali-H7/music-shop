@@ -3,6 +3,7 @@ import Homepage from './pages/Homepage';
 import Product from './pages/Product';
 import Shop from './pages/Shop';
 import ShoppingCart from './pages/ShoppingCart/ShoppingCart';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router';
 
@@ -45,7 +46,7 @@ const routes = [
         element: <ShoppingCart />,
       },
     ],
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
   },
 ];
 
