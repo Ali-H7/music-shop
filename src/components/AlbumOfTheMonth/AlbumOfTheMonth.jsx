@@ -1,6 +1,7 @@
 import styles from './AlbumOfTheMonth.module.css';
 import PropTypes from 'prop-types';
 import { ClipLoader } from 'react-spinners';
+import { Link } from 'react-router';
 
 function AlbumOfTheMonth({ album }) {
   if (!album) {
@@ -14,13 +15,17 @@ function AlbumOfTheMonth({ album }) {
     <div className={styles.albumOfTheMonthContainer}>
       <div className={styles.albumCover}>
         <img src={album.imageOfTheMonth} />
-        <button className={`${styles.discoverBtn} ${styles.toggleFirstBtn}`}>Discover Now</button>
+        <Link to='/product/9/' className={styles.toggleFirstBtn}>
+          <button className={`${styles.discoverBtn}`}>Discover Now</button>
+        </Link>
       </div>
       <div className={styles.textContainer}>
-        <h3>Album of The Month</h3>
-        <h1>{album.albumName + ' - ' + album.artist}</h1>
+        <h2 className={styles.albumTitle}>ALBUM OF THE MONTH</h2>
+        <h3 className={styles.albumArtist}>{album.albumName + ' - ' + album.artist}</h3>
         <p className={styles.textDescription}>{album.description}</p>
-        <button className={`${styles.discoverBtn} ${styles.toggleSecondBtn}`}>Discover Now</button>
+        <Link to='/product/9/' className={styles.toggleSecondBtn}>
+          <button className={`${styles.discoverBtn}`}>Discover Now</button>
+        </Link>
       </div>
     </div>
   );

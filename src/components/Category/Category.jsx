@@ -3,13 +3,19 @@ import CategoryCard from '../CategoryCard/CategoryCard';
 import cassette from '../../assets/cassette.webp';
 import cd from '../../assets/cd.webp';
 import vinyl from '../../assets/vinyl.webp';
-
+import { Link } from 'react-router';
 function Category() {
   return (
     <div className={styles.category}>
-      <CategoryCard image={cassette} mainText='Cassettes' />
-      <CategoryCard image={cd} mainText='Cds' />
-      <CategoryCard image={vinyl} mainText='Vinyl' />
+      <Link to='/shop/'>
+        <CategoryCard image={cassette} mainText='CASSETTES' />
+      </Link>
+      <Link to='/shop/'>
+        <CategoryCard image={cd} mainText='CDs' />
+      </Link>
+      <Link to='/shop/'>
+        <CategoryCard image={vinyl} mainText='VINYL' />
+      </Link>
     </div>
   );
 }

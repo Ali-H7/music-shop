@@ -10,6 +10,10 @@ function AddToCartButton({ albumId, cart, cartSetter }) {
 
   useEffect(() => {
     document.body.style.overflow = isCartOpen ? 'hidden' : 'auto';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
   }, [isCartOpen]);
 
   useEffect(() => {

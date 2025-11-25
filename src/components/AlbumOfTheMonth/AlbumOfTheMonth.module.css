@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 64px;
+  padding: 64px 32px;
   gap: 64px;
 }
 
@@ -14,11 +14,20 @@
   gap: 32px;
 }
 
+.albumTitle {
+  font-size: clamp(2rem, 2vw, 3.2rem);
+}
+
+.albumArtist {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+}
+
 .textContainer {
   display: flex;
   flex-direction: column;
-  max-width: clamp(300px, 30vw, 530px);
+  max-width: clamp(30rem, 30vw, 53rem);
   gap: 8px;
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
 .textDescription {
@@ -28,11 +37,17 @@
 }
 
 .discoverBtn {
-  background-color: #fee440;
+  background-color: #00ada3;
   border: none;
   height: 40px;
   border-radius: 5rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.discoverBtn:hover {
+  cursor: pointer;
+  background-color: #009790;
 }
 
 .toggleFirstBtn {

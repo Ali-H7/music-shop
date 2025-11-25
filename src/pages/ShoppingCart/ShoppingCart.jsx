@@ -6,7 +6,9 @@ function ShoppingCart() {
   return (
     <div className={styles.cartContainer}>
       <ShoppingCartTable />
-      <OrderSummary />
+      <div className={styles.orderSummaryContainer}>
+        <OrderSummary />
+      </div>
     </div>
   );
 }

@@ -8,6 +8,7 @@ function CategoryCard({ image, mainText }) {
         <p>{mainText}</p>
         <p className={styles.textSecondary}>[ Shop Now ]</p>
       </div>
+      <div className={styles.overlay}></div>
     </div>
   );
 }

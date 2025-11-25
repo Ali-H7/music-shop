@@ -1,5 +1,7 @@
 import styles from './OrderSummary.module.css';
 import { useOutletContext } from 'react-router';
+import { Link } from 'react-router';
+
 function OrderSummary() {
   const { cart, albums, itemQuantity } = useOutletContext();
 
@@ -32,8 +34,14 @@ function OrderSummary() {
         <p>Total:</p>
         <p>{`${total.toFixed(3)} BHD`}</p>
       </div>
-      <button className={styles.checkoutBtn}>Checkout</button>
-      <p className={styles.continue}>Continue Shopping</p>
+      <Link to='/cart'>
+        <button className={styles.checkoutBtn}>Checkout</button>
+      </Link>
+      <div className={styles.continue}>
+        <Link to='/shop/'>
+          <p>Continue Shopping</p>
+        </Link>
+      </div>
     </div>
   );
 }

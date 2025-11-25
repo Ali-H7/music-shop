@@ -3,7 +3,7 @@ import styles from './Newsletter.module.css';
 function Newsletter() {
   return (
     <div className={styles.newsletter}>
-      <p className={styles.title}>Discover hidden gems, collector's editions, and subscriber-only deals.</p>
+      <p className={styles.title}>Discover hidden gems, collector's editions, and subscriber only deals.</p>
       <div className={styles.container}>
         <div className={styles.emailContainer}>
           <input type='email' placeholder='Enter Email Addresss' className={styles.emailInput} />

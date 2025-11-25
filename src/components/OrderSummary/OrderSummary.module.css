@@ -1,12 +1,12 @@
 .summaryContainer {
   font-family: 'Montserrat';
-  max-width: 350px;
+  width: 100%;
 }
 
 .title {
   text-align: center;
   padding-bottom: 16px;
-  font-family: 'Akira Expanded';
+  font-family: 'Science Gothic';
   font-size: clamp(1.8rem, 5.1vw, 2.4rem);
 }
 
@@ -25,23 +25,33 @@
 
 .total {
   padding: 16px 0;
-  font-family: 'Akira Expanded';
+  font-family: 'Science Gothic';
   letter-spacing: 1px;
 }
 
 .checkoutBtn {
-  background-color: #fee440;
+  background-color: #00ada3;
   width: 100%;
   padding: 8px;
   border-radius: 24px;
   border: none;
-  font-family: 'Akira Expanded';
+  font-family: 'Science Gothic';
+  font-size: 1.8rem;
+}
+
+.checkoutBtn:hover {
+  cursor: pointer;
+  background-color: #009790;
 }
 
 .continue {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   padding: 16px;
-  color: #9b5de5;
+}
+
+.continue p:hover {
+  color: #a4133c;
 }
 
 @media (max-width: 1100px) {

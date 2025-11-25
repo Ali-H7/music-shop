@@ -12,7 +12,7 @@ function ProductList({ headingsTitle }) {
 
   let albumsToDisplay;
 
-  if (headingsTitle === 'Fan Favorites') {
+  if (headingsTitle === 'FAN FAVORITES') {
     albumsToDisplay = albums.slice(0, 4);
   } else if (sortValue === 'az') {
     albumsToDisplay = [...albums].sort((a, b) => a.albumName.localeCompare(b.albumName));
@@ -30,16 +30,16 @@ function ProductList({ headingsTitle }) {
     <div className={styles.productListContainer}>
       <div className={styles.productList}>
         <h2 className={styles.title}>{headingsTitle}</h2>
-        {headingsTitle !== 'Fan Favorites' && <Sort sortValueSetter={setSortValue} />}
+        {headingsTitle !== 'FAN FAVORITES' && <Sort sortValueSetter={setSortValue} />}
         <div className={styles.cards}>
           {albumsToDisplay.map((album, i) => {
             return (
               <div
                 key={album.id}
-                className={`${styles.card} ${i === 3 && headingsTitle === 'Fan Favorites' ? styles.hide : ''}`}
+                className={`${styles.card} ${i === 3 && headingsTitle === 'FAN FAVORITES' ? styles.hide : ''}`}
               >
                 <AlbumCard album={album} />
-                {headingsTitle !== 'Fan Favorites' && (
+                {headingsTitle !== 'FAN FAVORITES' && (
                   <AddToCartButton albumId={album.id} cart={cart} cartSetter={setCart} />
                 )}
               </div>

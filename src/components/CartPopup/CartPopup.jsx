@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import Quantity from '../Quantity/Quantity';
 import { SquareX } from 'lucide-react';
 import OrderSummary from '../OrderSummary/OrderSummary';
+
 function CartPopup({ handleCartPopUp }) {
   const { albums, cart } = useOutletContext();
   return (
-    <div className={styles.module}>
+    <div className={`${styles.module} ${styles.slideRight}`}>
       <div className={styles.title}>
         <h3>Added to cart</h3>
         <button className={styles.closeBtn} onClick={handleCartPopUp}>

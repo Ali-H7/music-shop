@@ -25,7 +25,7 @@ function Navigation() {
       list: ['Login', 'Register', 'Order History', 'Wishlist'],
     },
     {
-      title: 'Follow US',
+      title: 'Follow Us',
       list: [
         'fa-brands fa-x-twitter',
         'fa-brands fa-square-facebook',

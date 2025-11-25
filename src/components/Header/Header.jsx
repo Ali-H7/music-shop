@@ -23,14 +23,14 @@ function Header({ quantity }) {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link to='/'>
-          <h1 className={styles.logo}>Music Shop</h1>
+          <h1 className={styles.logo}>MUSIC SHOP</h1>
         </Link>
         <div className={styles.menu}>
           <button className={styles.button} onClick={toggleMenu}>
             <Menu size={32} />
           </button>
         </div>
-        <div className={`${styles.listContainer} ${isMenuOpen && styles.show}`}>
+        <div className={`${styles.listContainer} ${isMenuOpen && styles.showContainer}`}>
           <div className={styles.closeIcon}>
             <button className={styles.button} onClick={toggleMenu}>
               <SquareX size={32} />
@@ -47,7 +47,7 @@ function Header({ quantity }) {
               <Link to='/cart/' onClick={isMenuOpen && toggleMenu}>
                 <li>Cart</li>
               </Link>
-              <div className={`${styles.qunatity} ${quantity > 0 && styles.show}`}>
+              <div className={`${styles.qunatity} ${quantity > 0 && styles.showIcon}`}>
                 <p>{quantity}</p>
               </div>
             </div>

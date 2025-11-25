@@ -8,7 +8,7 @@ function Homepage() {
   const { albumOfTheMonth } = useOutletContext();
   return (
     <>
-      <ProductList headingsTitle={'Fan Favorites'} />
+      <ProductList headingsTitle={'FAN FAVORITES'} />
       <AlbumOfTheMonth album={albumOfTheMonth} />
       <Category />
       <Newsletter />

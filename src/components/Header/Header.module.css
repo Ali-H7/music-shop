@@ -14,7 +14,7 @@
 }
 
 .logo {
-  color: #9b5de5;
+  color: #a4133c;
   font-size: clamp(3rem, 8vw, 4.8rem);
 }
 
@@ -31,7 +31,7 @@
 }
 
 .qunatity {
-  background-color: #9b5de5;
+  background-color: #800f2f;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -44,7 +44,11 @@
   visibility: hidden;
 }
 
-.show {
+.showContainer {
+  visibility: visible;
+}
+
+.showIcon {
   visibility: visible;
 }
 
@@ -77,7 +81,7 @@
     display: none;
   }
 
-  .show {
+  .showContainer {
     display: block;
   }
 
@@ -95,7 +99,7 @@
 
   .qunatity {
     position: absolute;
-    margin-left: 98px;
+    margin-left: 67px;
     width: 16px;
     height: 16px;
   }
