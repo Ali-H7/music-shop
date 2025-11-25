@@ -36,6 +36,11 @@ table {
   align-items: center;
   font-size: 14px;
 }
+
+.title {
+  font-size: 1.8rem;
+}
+
 .image {
   max-width: 100px;
 }
