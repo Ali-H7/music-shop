@@ -34,6 +34,14 @@ function ProductList({ headingsTitle }) {
     albumsToDisplay = [...albumsToDisplay].sort((a, b) => b.price - a.price);
   }
 
+  if (albumsToDisplay.length === 0) {
+    return (
+      <div className={styles.emptySearchContainer}>
+        <p>No items found. Please try a different search or browse our collection.</p>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.productListContainer}>
       <div className={styles.productList}>
