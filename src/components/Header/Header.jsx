@@ -31,7 +31,9 @@ function Header({ quantity, searchSetter }) {
         <Link to='/'>
           <h1 className={styles.logo}>MUSIC SHOP</h1>
         </Link>
-        <SearchBar searchSetter={searchSetter} />
+        <div className={styles.searchDesktop}>
+          <SearchBar searchSetter={searchSetter} />
+        </div>
         <div className={styles.menu}>
           <button className={styles.button} onClick={toggleMenu}>
             <Menu size={32} />
@@ -61,6 +63,9 @@ function Header({ quantity, searchSetter }) {
           </ul>
         </div>
       </nav>
+      <div className={styles.searchMobile}>
+        <SearchBar searchSetter={searchSetter} />
+      </div>
     </header>
   );
 }
