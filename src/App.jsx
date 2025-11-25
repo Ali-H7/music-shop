@@ -18,7 +18,7 @@ function App() {
       .then((data) => data.sort((a, b) => a.salesRanking - b.salesRanking)) // sort albums ranking
       .then((sortedAlbums) => {
         setAlbums(sortedAlbums);
-        setAlbumOfTheMonth(sortedAlbums[11]);
+        setAlbumOfTheMonth(sortedAlbums[8]);
       });
   }, []);
 

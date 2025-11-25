@@ -14,17 +14,17 @@
     "artist": "Wiz Khalifa",
     "image": "/images/rolling-papers.webp",
     "price": 3.5,
-    "salesRanking": 5,
+    "salesRanking": 11,
     "description": "Wiz Khalifa's major-label debut, Rolling Papers (2011), is a defining party-rap album that successfully merges traditional hip-hop with modern pop songwriting. Tracks like 'Black and Yellow' and 'No Sleep' feature catchy sing-along choruses and synthesizer sparkle, elevating the pursuit of a laidback, good time into anthems."
   },
   {
     "id": 2,
-    "albumName": "Greatest Hits",
+    "albumName": "Me Against the World",
     "artist": "2PAC",
-    "image": "/images/greatest-hits.webp",
+    "image": "/images/me-against-the-world.webp",
     "price": 6,
-    "salesRanking": 6,
-    "description": "2Pac's Greatest Hits (1998) is a non-chronological compilation of 21 career highlights, featuring iconic tracks from his time on Death Row and earlier works. The double album also includes four previously unreleased songs, such as the critically acclaimed 'Changes,' showcasing the depth of his lyrical legacy."
+    "salesRanking": 4,
+    "description": "2Pac's third studio album, 'Me Against the World' (1995), is his most introspective and critically acclaimed work, considered by many to be his magnum opus. Released while he was incarcerated, it debuted at number one on the Billboard 200, making him the first artist to achieve this feat while serving a prison sentence. The album is a raw, confessional exploration of his impending prison sentence, troubles with the police, poverty, and loss of innocence, featuring hit singles like the Grammy-nominated 'Dear Mama,' 'So Many Tears,' and 'Temptations.'"
   },
   {
     "id": 3,
@@ -41,7 +41,7 @@
     "artist": "Justin Bieber",
     "image": "/images/justice.webp",
     "price": 4.5,
-    "salesRanking": 7,
+    "salesRanking": 11,
     "description": "Justin Bieber's sixth studio album, Justice (2021), is a blend of pop, R&B, and dream pop, incorporating elements of 80s synth-pop and folk acoustic guitar. It is lyrically focused on themes of spiritual growth, love, and community, featuring chart-topping singles like 'Peaches,' 'Holy,' and 'Ghost'."
   },
   {
@@ -50,17 +50,17 @@
     "artist": "Halsey",
     "image": "/images/badlands.webp",
     "price": 3.5,
-    "salesRanking": 8,
+    "salesRanking": 5,
     "description": "Halsey's debut studio album, Badlands (2015), is a concept record within the genres of electropop, alt-pop, and synth-pop with industrial undertones. It uses the fictional dystopian city of 'The Badlands' as a metaphor for the artist's desolate and lonely state of mind, exploring themes of love, heartbreak, and mental struggle."
   },
   {
     "id": 6,
-    "albumName": "Kiss",
-    "artist": "Carly Rae Jepsen",
-    "image": "/images/kiss.webp",
-    "price": 3,
-    "salesRanking": 9,
-    "description": "Carly Rae Jepsen's international debut, Kiss (2012), is an unabashedly feel-good pop record, driven by nu-disco, dance-pop, and teen pop influences. It is filled with pop hooks, simple riffs, and syrupy vocals, featuring her breakout global hit 'Call Me Maybe' and the successful collaboration 'Good Time' with Owl City."
+    "albumName": "KPop Demon Hunters (Soundtrack from the Netflix Film / Deluxe Version)",
+    "artist": "KPop Demon Hunters Cast",
+    "image": "/images/kpop.webp",
+    "price": 3.0,
+    "salesRanking": 6,
+    "description": "The deluxe 35-song soundtrack to the Netflix animated musical film 'KPop Demon Hunters' (2025). Featuring original songs by the fictional groups HUNTR/X and Saja Boys, the album blends K-pop, Hip-Hop, and R&B. It includes the major hit 'Golden' and the track 'Takedown' featuring members of TWICE. The deluxe version adds two unreleased tracks ('Prologue' and 'Jinu's Lament') along with instrumental, sing-along, and a cappella versions of the core songs."
   },
   {
     "id": 7,
@@ -68,17 +68,17 @@
     "artist": "Taylor Swift",
     "image": "/images/1989ts.webp",
     "price": 5,
-    "salesRanking": 10,
+    "salesRanking": 12,
     "description": "1989 (Taylor's Version) (2023) is a synth-pop re-recording of the 2014 album, characterized by an upbeat, 1980s-inspired sound with a cleaner, more developed vocal performance. It features re-recordings of the original tracks plus five previously unreleased 'From the Vault' songs that maintain the album's kaleidoscopic feel."
   },
   {
     "id": 8,
-    "albumName": "Recovery",
-    "artist": "Eminem",
-    "image": "/images/recovery.webp",
+    "albumName": "Let Go",
+    "artist": "Avril Lavigne",
+    "image": "/images/let-go.webp",
     "price": 4.5,
-    "salesRanking": 11,
-    "description": "Eminem's seventh studio album, Recovery (2010), marks a shift from his previous work, featuring a more introspective and emotional lyrical content centered on his journey of overcoming drug addiction. It blends hip-hop with pop rap and alternative hip-hop, featuring powerful anthems like 'Not Afraid' and the hit collaboration 'Love the Way You Lie'."
+    "salesRanking": 7,
+    "description": "Avril Lavigne's debut studio album, Let Go (2002), is credited with helping integrate pop-punk and alternative rock into the mainstream. It was a massive commercial success, making her the youngest female solo artist to have a number-one album in the UK at the time. The album features the global hit singles 'Complicated,' 'Sk8er Boi,' and 'I'm with You,' establishing her signature tomboy/skater-girl persona."
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "image": "/images/guts.webp",
     "imageOfTheMonth": "/images/guts-vinyl.webp",
     "price": 6,
-    "salesRanking": 12,
+    "salesRanking": 9,
     "description": "Olivia Rodrigo's sophomore album GUTS (2023) is a bold mix of pop rock, alt-pop, and punk-inspired energy, capturing the raw emotions of growing up, heartbreak, and self-discovery."
   },
   {
@@ -96,7 +96,7 @@
     "artist": "Linkin Park",
     "image": "/images/hybrid-theory.webp",
     "price": 4,
-    "salesRanking": 4,
+    "salesRanking": 3,
     "description": "Linkin Park's debut album, Hybrid Theory (2000), is a defining masterpiece of nu-metal, rap metal, and alternative rock. It innovatively fuses heavy rock with Mike Shinoda's raps and electronic elements, providing cathartic, emotionally honest anthems like 'In the End' and 'Crawling' about adolescent struggle and internal conflict."
   },
   {
@@ -105,7 +105,7 @@
     "artist": "2PAC",
     "image": "/images/better-dayz.webp",
     "price": 3.5,
-    "salesRanking": 3,
+    "salesRanking": 8,
     "description": "Better Dayz (2002) is a posthumous double album compiling previously unreleased material, mostly consisting of remixed tracks from 2Pac's 'Makaveli' period (1994 - 1996). The album blends hip hop, gangsta rap, and R&B, featuring a mix of introspective and hardcore tracks, including the successful singles 'Thugz Mansion' and 'Still Ballin'. "
   }
 ]

@@ -6,7 +6,7 @@ function Sort({ sortValueSetter }) {
     <div className={styles.sort}>
       <label htmlFor='sort'>Sort by:</label>
       <select id='sort' className={styles.sort} onChange={(e) => sortValueSetter(e.target.value)}>
-        <option value='featured'>Best Sellers</option>
+        <option value='featured'>Featured</option>
         <option value='az'>Alphabetically, A-Z</option>
         <option value='za'>Alphabetically, Z-A</option>
         <option value='low'>Price, low to high</option>
