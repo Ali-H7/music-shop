@@ -15,10 +15,12 @@ function SearchBar({ searchQuery, searchSetter, searchClass }) {
     if (key === 'Enter') {
       const products = document.querySelector('#products');
       const searchBars = document.querySelectorAll('.'.concat(searchClass));
-      products.scrollIntoView({ behavior: 'smooth' });
       pressedEnter = true;
       searchBars.forEach((searchBar) => searchBar.blur());
       pressedEnter = false;
+      setTimeout(() => {
+        products.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
   }
 
