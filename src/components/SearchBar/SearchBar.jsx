@@ -10,6 +10,13 @@ function SearchBar({ searchQuery, searchSetter }) {
     searchSetter(input);
   }
 
+  function scrollToResult(key) {
+    if (key === 'Enter') {
+      const products = document.querySelector('#products');
+      products.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <div className={styles.searchContainer}>
       <Search className={styles.searchIcon} />
@@ -17,6 +24,7 @@ function SearchBar({ searchQuery, searchSetter }) {
         value={searchQuery}
         className={styles.search}
         placeholder='Search'
+        onKeyDown={(e) => scrollToResult(e.key)}
         onFocus={() => navigate('/shop/')}
         onChange={(e) => handleInput(e.target.value)}
         onBlur={() =>

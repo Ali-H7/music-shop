@@ -44,7 +44,7 @@ function ProductList({ headingsTitle }) {
 
   return (
     <div className={styles.productListContainer}>
-      <div className={styles.productList}>
+      <div className={styles.productList} id={headingsTitle === 'OUR PRODUCTS' ? 'products' : ''}>
         <h2 className={styles.title}>{headingsTitle}</h2>
         {headingsTitle !== 'FAN FAVORITES' && <Sort sortValueSetter={setSortValue} />}
         <div className={styles.cards}>
