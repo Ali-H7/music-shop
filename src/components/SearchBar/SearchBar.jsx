@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 
 function SearchBar({ searchQuery, searchSetter }) {
   const navigate = useNavigate();
+  let pressedEnter = false;
 
   function handleInput(userInput) {
     const input = userInput.toLowerCase();
@@ -13,7 +14,11 @@ function SearchBar({ searchQuery, searchSetter }) {
   function scrollToResult(key) {
     if (key === 'Enter') {
       const products = document.querySelector('#products');
+      const searchBar = document.querySelector('#search');
       products.scrollIntoView({ behavior: 'smooth' });
+      pressedEnter = true;
+      searchBar.blur();
+      pressedEnter = false;
     }
   }
 
@@ -27,12 +32,15 @@ function SearchBar({ searchQuery, searchSetter }) {
         onKeyDown={(e) => scrollToResult(e.key)}
         onFocus={() => navigate('/shop/')}
         onChange={(e) => handleInput(e.target.value)}
-        onBlur={() =>
-          setTimeout(() => {
-            searchSetter('');
-          }, 200)
-        }
+        onBlur={() => {
+          if (!pressedEnter) {
+            setTimeout(() => {
+              searchSetter('');
+            }, 200);
+          }
+        }}
       />
+
       {searchQuery && (
         <button className={styles.clearIcon} onClick={() => searchSetter('')}>
           <X />
