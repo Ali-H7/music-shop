@@ -2,7 +2,7 @@ import styles from './SearchBar.module.css';
 import { Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router';
 
-function SearchBar({ searchQuery, searchSetter }) {
+function SearchBar({ searchQuery, searchSetter, searchClass }) {
   const navigate = useNavigate();
   let pressedEnter = false;
 
@@ -14,10 +14,10 @@ function SearchBar({ searchQuery, searchSetter }) {
   function scrollToResult(key) {
     if (key === 'Enter') {
       const products = document.querySelector('#products');
-      const searchBar = document.querySelector('#search');
+      const searchBars = document.querySelectorAll('.'.concat(searchClass));
       products.scrollIntoView({ behavior: 'smooth' });
       pressedEnter = true;
-      searchBar.blur();
+      searchBars.forEach((searchBar) => searchBar.blur());
       pressedEnter = false;
     }
   }
@@ -27,7 +27,7 @@ function SearchBar({ searchQuery, searchSetter }) {
       <Search className={styles.searchIcon} />
       <input
         value={searchQuery}
-        className={styles.search}
+        className={`${styles.search} ${searchClass}`}
         placeholder='Search'
         onKeyDown={(e) => scrollToResult(e.key)}
         onFocus={() => navigate('/shop/')}

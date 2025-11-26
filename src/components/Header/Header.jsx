@@ -32,7 +32,7 @@ function Header({ quantity, searchQuery, searchSetter }) {
           <h1 className={styles.logo}>MUSIC SHOP</h1>
         </Link>
         <div className={styles.searchDesktop}>
-          <SearchBar searchQuery={searchQuery} searchSetter={searchSetter} />
+          <SearchBar searchQuery={searchQuery} searchSetter={searchSetter} searchClass={'searchBar'} />
         </div>
         <div className={styles.menu}>
           <button className={styles.button} onClick={toggleMenu}>
@@ -64,7 +64,7 @@ function Header({ quantity, searchQuery, searchSetter }) {
         </div>
       </nav>
       <div className={styles.searchMobile}>
-        <SearchBar searchQuery={searchQuery} searchSetter={searchSetter} />
+        <SearchBar searchQuery={searchQuery} searchSetter={searchSetter} searchClass={'searchBar'} />
       </div>
     </header>
   );
