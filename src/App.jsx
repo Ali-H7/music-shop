@@ -3,7 +3,7 @@ import Header from './components/Header/Header.jsx';
 import AnnouncementBanner from './components/AnnouncementBanner/AnnouncementBanner.jsx';
 import Footer from './components/Footer/Footer.jsx';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Outlet } from 'react-router';
 function App() {
   const [albums, setAlbums] = useState([]);
@@ -11,6 +11,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const itemQuantity = cart.map((item) => item.quantity).reduce((a, b) => a + b, 0);
   const [searchQuery, setSearchQuery] = useState('');
+  const productRef = useRef(null);
 
   useEffect(() => {
     fetch('./data.json')
@@ -24,9 +25,9 @@ function App() {
 
   return (
     <div className='app-container'>
-      <Header quantity={itemQuantity} searchQuery={searchQuery} searchSetter={setSearchQuery} />
+      <Header quantity={itemQuantity} searchQuery={searchQuery} searchSetter={setSearchQuery} productRef={productRef} />
       <AnnouncementBanner />
-      <Outlet context={{ albums, albumOfTheMonth, cart, setCart, itemQuantity, searchQuery }} />
+      <Outlet context={{ albums, albumOfTheMonth, cart, setCart, itemQuantity, searchQuery, productRef }} />
       <Footer />
     </div>
   );

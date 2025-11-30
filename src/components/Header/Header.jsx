@@ -5,7 +5,7 @@ import { Menu, SquareX } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-function Header({ quantity, searchQuery, searchSetter }) {
+function Header({ quantity, searchQuery, searchSetter, productRef }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -32,7 +32,7 @@ function Header({ quantity, searchQuery, searchSetter }) {
           <h1 className={styles.logo}>MUSIC SHOP</h1>
         </Link>
         <div className={styles.searchDesktop}>
-          <SearchBar searchQuery={searchQuery} searchSetter={searchSetter} searchClass={'searchBar'} />
+          <SearchBar searchQuery={searchQuery} searchSetter={searchSetter} productRef={productRef} />
         </div>
         <div className={styles.menu}>
           <button className={styles.button} onClick={toggleMenu}>
@@ -64,7 +64,7 @@ function Header({ quantity, searchQuery, searchSetter }) {
         </div>
       </nav>
       <div className={styles.searchMobile}>
-        <SearchBar searchQuery={searchQuery} searchSetter={searchSetter} searchClass={'searchBar'} />
+        <SearchBar searchQuery={searchQuery} searchSetter={searchSetter} productRef={productRef} />
       </div>
     </header>
   );
