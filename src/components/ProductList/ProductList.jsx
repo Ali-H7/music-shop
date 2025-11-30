@@ -6,7 +6,7 @@ import { useOutletContext } from 'react-router';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-function ProductList({ headingsTitle }) {
+function ProductList({ headingsTitle, productRef }) {
   const { albums, cart, setCart, searchQuery } = useOutletContext();
   const [sortValue, setSortValue] = useState('featured');
 
@@ -44,7 +44,7 @@ function ProductList({ headingsTitle }) {
 
   return (
     <div className={styles.productListContainer}>
-      <div className={styles.productList} id={headingsTitle === 'OUR PRODUCTS' ? 'products' : ''}>
+      <div className={styles.productList} ref={headingsTitle === 'OUR PRODUCTS' ? productRef : null}>
         <h2 className={styles.title}>{headingsTitle}</h2>
         {headingsTitle !== 'FAN FAVORITES' && <Sort sortValueSetter={setSortValue} />}
         <div className={styles.cards}>

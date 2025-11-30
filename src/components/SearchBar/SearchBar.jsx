@@ -19,7 +19,7 @@ function SearchBar({ searchQuery, searchSetter, productRef }) {
       searchBar.blur();
       pressedEnter = false;
       setTimeout(() => {
-        products.scrollIntoView({ behavior: 'smooth' });
+        products.current.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     }
   }
